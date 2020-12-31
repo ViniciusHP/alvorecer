@@ -15,3 +15,67 @@ a {
 img {
   width: 100%;
 }
+
+.barra-menu {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  padding: 7px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F0E5CF;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1),
+              0 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  width: 227px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  font-size: 1rem;
+  color: #816B5F;
+  font-family: 'Merriweather', serif;
+  padding: 15px 20px;
+}
+
+.nav-menu a:hover {
+  color: #D8AA75;
+}
+
+.nav-menu > li > a::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  margin-top: 2px;
+  background: #D8AA75;
+  transition: .3s ease;
+}
+
+.nav-menu > li > a:hover::after,
+.nav-menu > li > a.ativo::after{
+  width: 100%;
+}
+
+.login {
+  margin-left: 25px;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background: #F0E5CF;
+}
+
+.nav-menu li:hover .dropdown-menu{
+  display: block;
+}
