@@ -1,0 +1,17 @@
+body, ul, h2, h3, p, blockquote {
+  margin: 0 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+}
