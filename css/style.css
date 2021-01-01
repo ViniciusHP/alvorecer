@@ -79,3 +79,22 @@ img {
 .nav-menu li:hover .dropdown-menu{
   display: block;
 }
+
+.dropdown-menu a{
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu a::before{
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  margin-right: 2px;
+  background: #D8AA75;
+  transition: .3s ease;
+}
+
+.dropdown-menu a:hover::before{
+  width: 10px;
+}
