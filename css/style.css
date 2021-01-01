@@ -16,9 +16,14 @@ img {
   width: 100%;
 }
 
+/* Barra de menu */
+
 .barra-menu {
   box-sizing: border-box;
+  z-index: 5000;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 7px 16px;
   display: flex;
@@ -97,4 +102,10 @@ img {
 
 .dropdown-menu a:hover::before{
   width: 10px;
+}
+
+/* Slide */
+#page {
+  position: absolute;
+  margin-top: 68px;
 }
