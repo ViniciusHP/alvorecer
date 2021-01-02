@@ -21,6 +21,10 @@ img {
   max-width: 100%;
 }
 
+body {
+  background: #EBE5E2;
+}
+
 /* Barra de menu */
 
 .barra-menu {
@@ -174,4 +178,28 @@ body {
 .slide-controls li a:hover,
 .slide-controls li a.ativo{
   background: #D8AA75;
+}
+
+/* Aproveite Section*/
+.aproveite-section {
+  padding: 2.60rem 0;
+}
+
+.titulo-container {
+  margin: 2.60rem auto 1.7rem auto;
+  max-width: 960px;
+  text-align: center;
+  color: #816B5F;
+}
+
+.titulo-section {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitulo-section {
+  font-size: 1.2rem;
 }
