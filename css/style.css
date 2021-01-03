@@ -203,3 +203,53 @@ body {
 .subtitulo-section {
   font-size: 1.2rem;
 }
+
+/* card */
+
+.cards-container{
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card {
+  max-width: 259px;
+  border-radius: 11px;
+  background: #F0E5CF;
+  padding: 15px 20px 34px 20px;
+  margin: 20px 15px 20px 15px;
+  text-align: center;
+  color: #816B5F;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icone-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+
+.titulo-card {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.titulo-card::after {
+  content: '';
+  display: block;
+  width: 168px;
+  height: 2px;
+  background: #D8AA75;
+  margin: 5px auto 0 auto;
+}
+
+.texto-card {
+  font-size: 1.1rem;
+}
+
