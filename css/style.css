@@ -253,3 +253,39 @@ body {
 .texto-card {
   font-size: 1.1rem;
 }
+
+/* Locais Section */
+.container-960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.locais-section {
+  padding: 2.60rem 0;
+  background: #E8E0DC;
+}
+
+.locais-section .tab-nav{
+  padding: 0.71rem 0 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.locais-section .tab-nav a {
+  font-family: 'Merriweather', serif;
+  color: #816B5F;
+  border: 2px solid;
+  border-radius: 5px;
+  width: 153px;
+  padding: 8px 0;
+  margin: 0 31px;
+  font-size: 1.35rem;
+}
+
+.locais-section .tab-nav a:hover,
+.locais-section .tab-nav a.ativo {
+  color: #F0E5CF;
+  background: #816B5F;
+}
