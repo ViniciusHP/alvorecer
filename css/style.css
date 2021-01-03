@@ -120,6 +120,7 @@ body {
 /* Slide */
 #slide-section {
   position: relative;
+  max-height: 600px;
 }
 
 .slide-wrapper {
