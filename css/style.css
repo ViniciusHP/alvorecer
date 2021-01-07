@@ -508,3 +508,29 @@ body {
   background: #D8AA75;
   margin-right: 10px;
 }
+
+/* Footer */
+.footer {
+  padding: 28px 20px 40px 20px;
+  background: #F0E5CF;
+  text-align: center;
+  color: #816B5F;
+}
+
+.redes-sociais {
+  max-width: 308px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 28px auto;
+}
+
+.redes-sociais a{
+  width: 55px;
+  height: 55px;
+  padding: 0 11px;
+}
+
+.footer .copy {
+  font-family: 'Merriweather', serif;
+  font-style: italic;  
+}
