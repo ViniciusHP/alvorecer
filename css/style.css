@@ -14,6 +14,7 @@ ul, ol {
 a {
   text-decoration: none;
   display: inline-block;
+  color: #816B5F;
 }
 
 img {
@@ -463,4 +464,47 @@ body {
 
 .faq-section .resposta.ativo {
   display: block;
+}
+
+/* Contato Section*/
+.contato-section {
+  padding: 2.60rem 0;
+  color: #816B5F;
+}
+
+.contato-section .titulo-section {
+  margin: 2.6rem auto;
+  text-align: center;
+}
+
+.contato-section .dados-contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2.6rem auto;
+}
+
+.contato-section .mapa-container {
+  margin: 13px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.contato-section .lista-dados-contatos {
+  max-width: 358px;
+}
+
+.contato-section .lista-dados-contatos li{
+  font-size: 1.125rem;
+  margin: 8px 13px;
+}
+
+.contato-section .lista-dados-contatos li p::before {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: #D8AA75;
+  margin-right: 10px;
 }
