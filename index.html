@@ -5,192 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Alvorecer</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body>
-    <div id="page">
-      <header>
-        <div>
-          <a href="#"><img src="img/logo.svg" alt="Alvorecer"></a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#aproveite">Aproveite</a></li>
-            <li><a href="#locais">Locais</a></li>
-            <li><a href="#opinioes">Opinioes</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li>
-              <a href="sobre.html">Sobre</a>
-              <ul>
-                <li><a href="empresa.html">Empresa</a></li>
-                <li><a href="local.html">Local</a></li>
-              </ul>
-            </li>
-            <li><a href="login.html">Login</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section>
-        <div>
-          <ul>
-            <li><img src="img/slide/Cachoeira.jpg" alt="Cachoeira"></li>
-            <li><img src="img/slide/Acampamento.jpg" alt="Acampamento"></li>
-            <li><img src="img/slide/Ceu-noturno.jpg" alt="Céu noturno"></li>
-            <li><img src="img/slide/Floresta.jpg" alt="Floresta"></li>
-            <li><img src="img/slide/Lago.jpg" alt="Lago"></li>
-            <li><img src="img/slide/Montanha.jpg" alt="Montanha"></li>
-          </ul>
-        </div>
-      </section>
-      <section>
-        <div>
-          <h2>Aproveite</h2>
-          <span>Tudo do melhor</span>
-        </div>
-        <div>
-          <div>
-            <div>
-              <img src="img/icones/yoga-exercise.svg" alt="Relaxe">
-            </div>
-            <h3>Relaxe</h3>
-            <p>Relaxe com o nosso clima ameno e desestressante. Com vários locais relaxantes, deixe todas preocupações e deveres de lado e cuide da sua saúde física e mental</p>
+    <header class="barra-menu">
+      <div class="logo-container">
+        <a href="/"><img src="img/logo.svg" alt="Alvorecer"></a>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#aproveite-section">Aproveite</a></li>
+          <li><a href="#locais-section">Locais</a></li>
+          <li><a href="#opinioes-section">Opiniões</a></li>
+          <li><a href="#faq-section">FAQ</a></li>
+          <li><a href="#contato-section">Contato</a></li>
+          <li>
+            <a href="sobre.html">Sobre</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">Empresa</a></li>
+              <li><a href="local.html">Local</a></li>
+            </ul>
+          </li>
+          <li><a class="login" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="slide-section">
+      <div class="slide-wrapper">
+        <ol class="slide">
+          <li class="slide-item">
+              <img src="img/slide/Cachoeira.jpg" alt="Cachoeira">
+              <h2 class="slide-caption">Cachoeira</h2>
+          </li>
+          <li class="slide-item">
+              <img src="img/slide/Acampamento.jpg" alt="Acampamento">
+              <h2 class="slide-caption">Acampamento</h2>
+          </li>
+          <li class="slide-item">
+              <img src="img/slide/Ceu-noturno.jpg" alt="Céu noturno">
+              <h2 class="slide-caption">Céu noturno</h2>
+          </li>
+          <li class="slide-item">
+              <img src="img/slide/Floresta.jpg" alt="Floresta">
+              <h2 class="slide-caption">Floresta</h2>
+          </li>
+          <li class="slide-item">
+              <img src="img/slide/Lago.jpg" alt="Lago">
+              <h2 class="slide-caption">Lago</h2>
+          </li>
+          <li class="slide-item">
+              <img src="img/slide/Montanha.jpg" alt="Montanha">
+              <h2 class="slide-caption">Montanha</h2>
+          </li>
+        </ol>
+      </div>
+      <div class="controls-wrapper">
+        <ol class="slide-controls">
+          <li><a href="#slide1">Slide 1</a></li>
+          <li><a href="#slide2">Slide 2</a></li>
+          <li><a href="#slide3">Slide 3</a></li>
+          <li><a href="#slide4">Slide 4</a></li>
+          <li><a href="#slide5">Slide 5</a></li>
+          <li><a href="#slide6">Slide 6</a></li>
+        </ol>
+      </div>
+    </section>
+    <section id="aproveite-section" class="aproveite-section">
+      <div class="titulo-container">
+        <h2 class="titulo-section">Aproveite</h2>
+        <span class="subtitulo-section">Tudo do melhor</span>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="icone-container">
+            <img src="img/icones/yoga-exercise.svg" alt="Relaxe">
           </div>
-          <div>
-            <div>
-              <img src="img/icones/compass.svg" alt="Explore">
-            </div>
-            <h3>Explore</h3>
-            <p>Explore nossas chachoeiras, lagos, montanhas e mais. Com várias trilhas e locais para pesca, você que está no comando do que deseja fazer.</p>
-          </div>
-          <div>
-            <div>
-              <img src="img/icones/tent.svg" alt="Acampe">
-            </div>
-            <h3>Acampe</h3>
-            <p>Nós possuímos um acampamento perfeito para observar as estrelas. Também é possível ver vagalumes por toda região.</p>
-          </div>
+          <h3 class="titulo-card">Relaxe</h3>
+          <p class="texto-card">Relaxe com o nosso clima ameno e desestressante. Com vários locais relaxantes, deixe todas preocupações e deveres de lado e cuide da sua saúde física e mental</p>
         </div>
-      </section>
-      <section>
-        <div>
-          <h2>Locais</h2>
-          <span>Veja alguns de nossos locais!</span>
+        <div class="card">
+          <div class="icone-container">
+            <img src="img/icones/compass.svg" alt="Explore">
+          </div>
+          <h3 class="titulo-card">Explore</h3>
+          <p class="texto-card">Explore nossas chachoeiras, lagos, montanhas e mais. Com várias trilhas e locais para pesca, você que está no comando do que deseja fazer.</p>
         </div>
-        <ul>
-          <li><a href="#cachoeira">Cachoeira</a></li>
+        <div class="card">
+          <div class="icone-container">
+            <img src="img/icones/tent.svg" alt="Acampe">
+          </div>
+          <h3 class="titulo-card">Acampe</h3>
+          <p class="texto-card">Nós possuímos um acampamento perfeito para observar as estrelas. Também é possível ver vagalumes por toda região.</p>
+        </div>
+      </div>
+    </section>
+    <section id="locais-section" class="locais-section">
+      <div class="container-960">
+        <div class="titulo-container">
+          <h2 class="titulo-section">Locais</h2>
+          <span class="subtitulo-section">Veja alguns de nossos locais!</span>
+        </div>
+        <ul class="tab-nav">
+          <li><a class="ativo" href="#cachoeira">Cachoeira</a></li>
           <li><a href="#lago">Lago</a></li>
           <li><a href="#floresta">Floresta</a></li>
           <li><a href="#montanha">Montanha</a></li>
         </ul>
-        <div id="cachoeira">
-          <div>
+        <div id="cachoeira" class="tab-nav-item ativo">
+          <div class="tab-nav-card-imagem">
             <img src="img/cachoeira.jpg" alt="Cachoeira">
           </div>
-          <div>
-            <h3>Cachoeira</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
+          <div class="tab-nav-corpo">
+            <h3 class="tab-nav-titulo">Cachoeira</h3>
+            <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="lago">
-          <div>
+        <div id="lago" class="tab-nav-item">
+          <div class="tab-nav-card-imagem">
             <img src="img/lago.jpg" alt="Lago">
           </div>
-          <div>
-            <h3>Lago</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
+          <div class="tab-nav-corpo">
+            <h3 class="tab-nav-titulo">Lago</h3>
+            <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="floresta">
-          <div>
+        <div id="floresta" class="tab-nav-item">
+          <div class="tab-nav-card-imagem">
             <img src="img/floresta.jpg" alt="Floresta">
           </div>
-          <div>
-            <h3>Floresta</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
+          <div class="tab-nav-corpo">
+            <h3 class="tab-nav-titulo">Floresta</h3>
+            <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="montanha">
-          <div>
+        <div id="montanha" class="tab-nav-item">
+          <div class="tab-nav-card-imagem">
             <img src="img/montanha.jpg" alt="Montanha">
           </div>
-          <div>
-            <h3>Montanha</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
+          <div class="tab-nav-corpo">
+            <h3 class="tab-nav-titulo">Montanha</h3>
+            <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-      </section>
-      <section>
-        <h2>Opiniões</h2>
-        <div>
-          <img src="img/pessoas/pessoa1.png" alt="Pessoa1">
-          <blockquote>
+      </div>
+    </section>
+    <section id="opinioes-section" class="opinioes-section">
+      <div class="container-960">
+        <h2 class="titulo-section">Opiniões</h2>
+        <div class="opiniao-item">
+          <div class="foto-container">
+            <img class="foto" src="img/pessoas/pessoa1.png" alt="Pessoa1">
+          </div>
+          <blockquote class="texto-container">
             <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. Tellus pellentesque eu tincidunt tortor aliquam nulla. Proin sed libero enim sed. Erat velit scelerisque in dictum non consectetur a erat nam. Facilisis gravida neque convallis a."</em></p>
-            <footer>Vanessa</footer>
+            <footer class="citacao-nome">Vanessa</footer>
           </blockquote>
         </div>
-        <div>
-          <blockquote>
+        <div class="opiniao-item">
+          <blockquote class="texto-container">
             <p><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Congue quisque egestas diam in arcu cursus euismod. Tellus pellentesque eu tincidunt tortor aliquam nulla. Proin sed libero enim sed. Erat velit scelerisque in dictum non consectetur a erat nam. Facilisis gravida neque convallis a."</em></p>
-            <footer>Jéssica e Cléber</footer>
+            <footer class="citacao-nome citacao-direita">Jéssica e Cléber</footer>
           </blockquote>
-          <img src="img/pessoas/pessoa2.png" alt="Pessoa2">
+          <div class="foto-container">
+            <img class="foto" src="img/pessoas/pessoa2.png" alt="Pessoa2">
+          </div>
         </div>
-        <div>
+        <div class="numero-visitantes-container">
           <h3>Número de visitantes</h3>
           <span>1526989987</span>
         </div>
-      </section>
-      <section>
-        <h2>Perguntas Frequentes</h2>
-        <div>
-          <a href="#pergunta1">Pergunta 1</a>
-          <div id="pergunta1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
+      </div>
+    </section>
+    <section id="faq-section" class="faq-section">
+      <div class="container-960">
+        <h2 class="titulo-section">Perguntas Frequentes</h2>
+        <div class="perguntas-container">
+          <div class="bloco-pergunta">
+            <a class="pergunta ativo" href="#pergunta1">Pergunta 1</a>
+            <div id="pergunta1" class="resposta ativo">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
+            </div>
+          </div>
+          <div class="bloco-pergunta">
+            <a class="pergunta" href="#pergunta2">Pergunta 2</a>
+            <div id="pergunta2" class="resposta">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
+            </div>
+          </div>
+          <div class="bloco-pergunta">
+            <a class="pergunta" href="#pergunta3">Pergunta 3</a>
+            <div id="pergunta3" class="resposta">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
+            </div>
+          </div>
+          <div class="bloco-pergunta">
+            <a class="pergunta" href="#pergunta4">Pergunta 4</a>
+            <div id="pergunta4" class="resposta">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
+            </div>
           </div>
         </div>
-        <div>
-          <a href="#pergunta2">Pergunta 2</a>
-          <div id="pergunta2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
-          </div>
-        </div>
-        <div>
-          <a href="#pergunta3">Pergunta 3</a>
-          <div id="pergunta3">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
-          </div>
-        </div>
-        <div>
-          <a href="#pergunta4">Pergunta 4</a>
-          <div id="pergunta4">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Contato</h2>
-        <div>
-          <div>
+    </section>
+    <section id="contato-section" class="contato-section">
+      <div class="container-960">
+        <h2 class="titulo-section">Contato</h2>
+        <div class="dados-contato-container">
+          <div class="mapa-container">
             <img src="img/mapa.jpg" alt="Mapa">
           </div>
-          <ul>
-            <li>Rua das ruas, Nº 0, Vila das vilas</li>
-            <li>Araraquara - SP</li>
-            <li><a href="mailto:contato@email.com">contato@email.com</a></li>
-            <li>(16) 0000-0000</li>
+          <ul class="lista-dados-contatos">
+            <li><p>Rua das ruas, Nº 0, Vila das vilas</p></li>
+            <li><p>Araraquara - SP</p></li>
+            <li><p><a href="mailto:contato@email.com">contato@email.com</a></p></li>
+            <li><p>(16) 0000-0000</p></li>
           </ul>
         </div>
-      </section>
-      <footer>
-        <div>
-          <img src="img/icones/twitter-round.svg" alt="Twitter">
-          <img src="img/icones/tumblr-round.svg" alt="Tumblr">
-          <img src="img/icones/instagram-round.svg" alt="Instagram">
-          <img src="img/icones/facebook-round.svg" alt="Facebook">
-        </div>
-        <p>Vinicius &copy; 2020. Alguns direitos reservados.</p>
-      </footer>
-    </div>
+      </div> 
+    </section>
+    <footer class="footer">
+      <ul class="redes-sociais">
+        <li><a href="#"><img src="img/icones/twitter-round.svg" alt="Twitter"></a></li>
+        <li><a href="#"><img src="img/icones/tumblr-round.svg" alt="Tumblr"></a></li>
+        <li><a href="#"><img src="img/icones/instagram-round.svg" alt="Instagram"></a></li>
+        <li><a href="#"><img src="img/icones/facebook-round.svg" alt="Facebook"></a></li>
+      </ul>
+      <p class="copy">Vinicius &copy; 2020. Alguns direitos reservados.</p>
+    </footer>
     <script type="module" src="js/script.js"></script>
   </body>
 </html>
