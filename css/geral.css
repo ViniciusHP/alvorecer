@@ -24,6 +24,7 @@ img {
 
 body {
   background: #EBE5E2;
+  color: #816B5F;
 }
 
 .aproveite-section,
@@ -39,7 +40,6 @@ body {
   margin: 2.60rem auto 1.7rem auto;
   max-width: 960px;
   text-align: center;
-  color: #816B5F;
 }
 
 .titulo-section {
@@ -71,7 +71,6 @@ body {
   padding: 15px 20px 34px 20px;
   margin: 20px 15px 20px 15px;
   text-align: center;
-  color: #816B5F;
   box-sizing: border-box;
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -117,7 +116,6 @@ body {
 .opinioes-section {
   background: url('../img/folhas-background.jpg') center center no-repeat;
   background-size: cover;
-  color: #816B5F;
 }
 
 .opinioes-section .titulo-section{
@@ -189,7 +187,6 @@ body {
 /* FAQ Section*/
 .faq-section {
   background: #E8E0DC;
-  color: #816B5F;
 }
 
 .faq-section .titulo-section {
@@ -198,10 +195,6 @@ body {
 }
 
 /* Contato Section*/
-.contato-section {
-  color: #816B5F;
-}
-
 .contato-section .titulo-section {
   margin: 2.6rem auto;
   text-align: center;
@@ -244,7 +237,6 @@ body {
   padding: 28px 20px 40px 20px;
   background: #F0E5CF;
   text-align: center;
-  color: #816B5F;
 }
 
 .redes-sociais {
