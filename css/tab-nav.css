@@ -1,0 +1,79 @@
+.locais-section .tab-nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.locais-section .tab-nav a {
+  font-family: 'Merriweather', serif;
+  color: #816B5F;
+  border: 2px solid;
+  border-radius: 5px;
+  width: 153px;
+  padding: 8px 0;
+  margin: 10px 31px;
+  font-size: 1.3rem;
+}
+
+.locais-section .tab-nav a:hover,
+.locais-section .tab-nav a.ativo {
+  color: #F0E5CF;
+  background: #816B5F;
+}
+
+.locais-section .tab-nav-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 40px auto;
+}
+
+.tab-nav-corpo {
+  max-width: 415px;
+  margin: 20px 8.25px;
+}
+
+.tab-nav-card-imagem {
+  max-width: 407px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: #F0E5CF;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 8.25px;
+}
+
+.tab-nav-titulo {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-family: 'Merriweather', serif;
+  color: #816B5F;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.tab-nav-titulo::before {
+  content: '';
+  display: inline-block;
+  width: 56px;
+  height: 11px;
+  background: #D8AA75;
+  margin-right: 5px;
+}
+
+.tab-nav-texto {
+  color: #816B5F;
+  font-size: 1rem;
+}
+
+.locais-section .tab-nav-item {
+  display: none;
+}
+
+.locais-section .tab-nav-item.ativo {
+  display: flex;
+}
