@@ -35,19 +35,24 @@ body {
   padding: 2.60rem 0;
 }
 
-/* Aproveite Section*/
-.titulo-container {
-  margin: 2.60rem auto 1.7rem auto;
-  max-width: 960px;
-  text-align: center;
-}
-
 .titulo-section {
   font-family: 'Merriweather', serif;
   font-style: italic;
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.titulo-section-sozinho {
+  margin-top: 2.6rem;
+}
+
+/* Aproveite Section*/
+.titulo-container {
+  margin: 2.60rem auto 1.7rem auto;
+  max-width: 960px;
+  text-align: center;
 }
 
 .subtitulo-section {
@@ -118,11 +123,6 @@ body {
   background-size: cover;
 }
 
-.opinioes-section .titulo-section{
-  margin-top: 2.6rem;
-  text-align: center;
-}
-
 .opinioes-section .opiniao-item {
   margin: 27px auto;
   display: flex;
@@ -189,17 +189,7 @@ body {
   background: #E8E0DC;
 }
 
-.faq-section .titulo-section {
-  margin: 2.6rem auto;
-  text-align: center;
-}
-
 /* Contato Section*/
-.contato-section .titulo-section {
-  margin: 2.6rem auto;
-  text-align: center;
-}
-
 .contato-section .dados-contato-container {
   display: flex;
   flex-wrap: wrap;
