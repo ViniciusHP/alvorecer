@@ -26,11 +26,15 @@ body {
   background: #EBE5E2;
 }
 
-/* Aproveite Section*/
-.aproveite-section {
+.aproveite-section,
+.locais-section,
+.opinioes-section,
+.faq-section,
+.contato-section {
   padding: 2.60rem 0;
 }
 
+/* Aproveite Section*/
 .titulo-container {
   margin: 2.60rem auto 1.7rem auto;
   max-width: 960px;
@@ -106,13 +110,11 @@ body {
 }
 
 .locais-section {
-  padding: 2.60rem 0;
   background: #E8E0DC;
 }
 
 /* Opiniões Section */
 .opinioes-section {
-  padding: 2.60rem 0;
   background: url('../img/folhas-background.jpg') center center no-repeat;
   background-size: cover;
   color: #816B5F;
@@ -187,7 +189,6 @@ body {
 /* FAQ Section*/
 .faq-section {
   background: #E8E0DC;
-  padding: 2.60rem 0;
   color: #816B5F;
 }
 
@@ -198,7 +199,6 @@ body {
 
 /* Contato Section*/
 .contato-section {
-  padding: 2.60rem 0;
   color: #816B5F;
 }
 
