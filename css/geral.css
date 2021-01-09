@@ -48,6 +48,11 @@ body {
   margin-top: 2.6rem;
 }
 
+.container-960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 /* Aproveite Section*/
 .titulo-container {
   margin: 2.60rem auto 1.7rem auto;
@@ -62,11 +67,10 @@ body {
 /* card */
 
 .cards-container{
-  max-width: 960px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   justify-content: center;
+  margin: 40px auto;
 }
 
 .card {
@@ -108,11 +112,6 @@ body {
 }
 
 /* Locais Section */
-.container-960 {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .locais-section {
   background: #E8E0DC;
 }
