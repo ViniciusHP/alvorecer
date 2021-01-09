@@ -1,0 +1,247 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, ul, ol, h2, h3, p, blockquote {
+  margin: 0 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #816B5F;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: #EBE5E2;
+  color: #816B5F;
+}
+
+.aproveite-section,
+.locais-section,
+.opinioes-section,
+.faq-section,
+.contato-section {
+  padding: 2.60rem 0;
+}
+
+.titulo-section {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.titulo-section-sozinho {
+  margin-top: 2.6rem;
+}
+
+.container-960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Aproveite Section*/
+.titulo-container {
+  margin: 2.60rem auto 1.7rem auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+.subtitulo-section {
+  font-size: 1.2rem;
+}
+
+/* card */
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.card {
+  max-width: 259px;
+  border-radius: 11px;
+  background: #F0E5CF;
+  padding: 15px 20px 34px 20px;
+  margin: 20px 15px 20px 15px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icone-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+}
+
+.titulo-card {
+  font-family: 'Merriweather', serif;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.titulo-card::after {
+  content: '';
+  display: block;
+  width: 168px;
+  height: 2px;
+  background: #D8AA75;
+  margin: 5px auto 0 auto;
+}
+
+.texto-card {
+  font-size: 1.1rem;
+}
+
+/* Locais Section */
+.locais-section {
+  background: #E8E0DC;
+}
+
+/* Opiniões Section */
+.opinioes-section {
+  background: url('../img/folhas-background.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.opinioes-section .opiniao-item {
+  margin: 27px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.opiniao-item .foto-container {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: #816B5F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.2);
+  margin: 0 12.7px;
+  flex-shrink: 0;
+}
+
+.opiniao-item .texto-container {
+  font-size: 1.125rem;
+  max-width: 645px;
+  margin: 10px 12.7px;
+}
+
+.opiniao-item .texto-container .citacao-nome {
+  color: #D8AA75;
+  font-style: italic;
+}
+
+.opiniao-item .texto-container .citacao-nome::before {
+  content: '-';
+}
+
+.citacao-direita {
+  text-align: right;
+}
+
+.numero-visitantes-container {
+  margin: 60px auto 40px auto;
+  text-align: center;
+}
+
+.numero-visitantes-container h3 {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.numero-visitantes-container span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #D8AA75;
+  padding: 5px 41px;
+  border: 5px solid;
+  border-radius: 2px;
+}
+
+/* FAQ Section*/
+.faq-section {
+  background: #E8E0DC;
+}
+
+/* Contato Section*/
+.contato-section .dados-contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2.6rem auto;
+}
+
+.contato-section .mapa-container {
+  margin: 13px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.contato-section .lista-dados-contatos {
+  max-width: 358px;
+}
+
+.contato-section .lista-dados-contatos li{
+  font-size: 1.125rem;
+  margin: 8px 13px;
+}
+
+.contato-section .lista-dados-contatos li p::before {
+  content: '';
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: #D8AA75;
+  margin-right: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 28px 20px 40px 20px;
+  background: #F0E5CF;
+  text-align: center;
+}
+
+.redes-sociais {
+  max-width: 308px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 28px auto;
+}
+
+.redes-sociais a{
+  width: 55px;
+  height: 55px;
+  padding: 0 11px;
+}
+
+.footer .copy {
+  font-family: 'Merriweather', serif;
+  font-style: italic;  
+}
