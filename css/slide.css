@@ -70,17 +70,6 @@
 
 @media (max-width: 576px) {
   .slide-item .slide-caption {
-    font-size: 3rem;
-    bottom: 70px;
-  }
-
-  .controls-wrapper{
-    bottom: 50px;
-  }
-}
-
-@media (max-width: 576px) {
-  .slide-item .slide-caption {
     font-size: 2rem;
     bottom: 50px;
   }
