@@ -8,7 +8,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 68px;
   padding: 7px 16px;
   display: flex;
