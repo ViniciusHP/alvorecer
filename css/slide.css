@@ -60,3 +60,10 @@
 .slide-controls li a.ativo{
   background: #D8AA75;
 }
+
+@media (max-width: 768px) {
+  .slide-item .slide-caption {
+    font-size: 3rem;
+    bottom: 5rem;
+  }
+}
