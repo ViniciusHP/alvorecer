@@ -63,7 +63,7 @@
   }
 
   .menu-mobile>li {
-    border-bottom: 1px solid #816B5F;
+    border-top: 1px solid #816B5F;
     margin-left: 10px;
     margin-right: 10px;
   }
