@@ -126,6 +126,7 @@ body {
   margin: 27px auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -148,9 +149,15 @@ body {
   margin: 10px 12.7px;
 }
 
+.opinioes-section .opiniao-item p{
+  padding-bottom: 2px;
+  border-bottom: 2px solid #D8AA75;
+}
+
 .opiniao-item .texto-container .citacao-nome {
-  color: #D8AA75;
+  margin-top: 5px;
   font-style: italic;
+  color: #D8AA75;
 }
 
 .opiniao-item .texto-container .citacao-nome::before {
@@ -244,4 +251,19 @@ body {
 .footer .copy {
   font-family: 'Merriweather', serif;
   font-style: italic;  
+}
+
+@media (max-width: 912px){
+  .opinioes-section .opiniao-item {
+    padding: 0 20px;
+  }
+  .opinioes-section .opiniao-item .foto-container{
+    order: -1;
+  }
+  .opinioes-section .opiniao-item .texto-container p{
+    text-align: justify;
+  }
+  .opinioes-section .opiniao-item .citacao-nome {
+    text-align: left;
+  }
 }
