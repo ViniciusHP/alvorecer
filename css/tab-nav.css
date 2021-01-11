@@ -77,3 +77,31 @@
 .locais-section .tab-nav-item.ativo {
   display: flex;
 }
+
+@media (max-width: 768px){
+  .locais-section .tab-nav a {
+    font-size: 1rem;
+    max-width: 110px;
+  }
+}
+
+@media (max-width: 940px){
+  .locais-section .tab-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .locais-section .tab-nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .locais-section .tab-nav-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tab-nav-corpo {
+    margin-top: 40px;
+  }
+}
