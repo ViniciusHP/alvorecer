@@ -86,19 +86,10 @@
 }
 
 @media (max-width: 940px){
-  .locais-section .tab-nav {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
   .locais-section .tab-nav a {
     margin-left: 10px;
     margin-right: 10px;
-  }
-
-  .locais-section .tab-nav-item {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .tab-nav-corpo {

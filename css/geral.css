@@ -51,6 +51,8 @@ body {
 .container-960 {
   max-width: 960px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Aproveite Section*/
@@ -254,9 +256,6 @@ body {
 }
 
 @media (max-width: 912px){
-  .opinioes-section .opiniao-item {
-    padding: 0 20px;
-  }
   .opinioes-section .opiniao-item .foto-container{
     order: -1;
   }
