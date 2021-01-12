@@ -230,6 +230,10 @@ body {
   margin-right: 10px;
 }
 
+.contato-section .lista-dados-contatos a:hover {
+  color: #D8AA75;
+}
+
 /* Footer */
 .footer {
   padding: 28px 20px 40px 20px;
