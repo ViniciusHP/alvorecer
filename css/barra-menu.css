@@ -64,6 +64,7 @@ body {
   position: absolute;
   padding: 10px;
   background: #F0E5CF;
+  width: 130px;
 }
 
 .dropdown-menu.ativo,
