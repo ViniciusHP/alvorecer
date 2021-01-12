@@ -1,7 +1,6 @@
 .faq-section .perguntas-container {
   max-width: 610px;
-  padding-bottom: 40px;
-  margin: 0 auto;
+  margin: 27px auto;
 }
 
 .faq-section .bloco-pergunta + .bloco-pergunta {

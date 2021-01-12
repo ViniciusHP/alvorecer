@@ -9,6 +9,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 68px;
   padding: 7px 16px;
   display: flex;
   justify-content: space-between;
@@ -63,8 +64,10 @@ body {
   position: absolute;
   padding: 10px;
   background: #F0E5CF;
+  width: 130px;
 }
 
+.dropdown-menu.ativo,
 .nav-menu li:hover .dropdown-menu{
   display: block;
 }

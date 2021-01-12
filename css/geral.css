@@ -51,6 +51,8 @@ body {
 .container-960 {
   max-width: 960px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Aproveite Section*/
@@ -126,6 +128,7 @@ body {
   margin: 27px auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 
@@ -148,9 +151,15 @@ body {
   margin: 10px 12.7px;
 }
 
+.opinioes-section .opiniao-item p{
+  padding-bottom: 2px;
+  border-bottom: 2px solid #D8AA75;
+}
+
 .opiniao-item .texto-container .citacao-nome {
-  color: #D8AA75;
+  margin-top: 5px;
   font-style: italic;
+  color: #D8AA75;
 }
 
 .opiniao-item .texto-container .citacao-nome::before {
@@ -221,6 +230,10 @@ body {
   margin-right: 10px;
 }
 
+.contato-section .lista-dados-contatos a:hover {
+  color: #D8AA75;
+}
+
 /* Footer */
 .footer {
   padding: 28px 20px 40px 20px;
@@ -232,6 +245,7 @@ body {
   max-width: 308px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto 28px auto;
 }
 
@@ -244,4 +258,29 @@ body {
 .footer .copy {
   font-family: 'Merriweather', serif;
   font-style: italic;  
+}
+
+@media (max-width: 359px){
+  .redes-sociais a{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px){
+  .contato-section .mapa-container {
+    margin: 13px 0;
+  }
+}
+
+@media (max-width: 912px){
+  .opinioes-section .opiniao-item .foto-container{
+    order: -1;
+  }
+  .opinioes-section .opiniao-item .texto-container p{
+    text-align: justify;
+  }
+  .opinioes-section .opiniao-item .citacao-nome {
+    text-align: left;
+  }
 }
