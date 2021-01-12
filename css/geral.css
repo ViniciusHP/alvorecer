@@ -241,6 +241,7 @@ body {
   max-width: 308px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto 28px auto;
 }
 
@@ -253,6 +254,13 @@ body {
 .footer .copy {
   font-family: 'Merriweather', serif;
   font-style: italic;  
+}
+
+@media (max-width: 359px){
+  .redes-sociais a{
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 768px){
