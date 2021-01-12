@@ -55,11 +55,14 @@
     text-align: center;
     opacity: 0;
     visibility: hidden;
+    transform: translate3d(20px, 0, 0);
+    transition: .3s ease;
   }
 
   .menu-mobile.ativo {
     opacity: 1;
     visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 
   .menu-mobile>li {
