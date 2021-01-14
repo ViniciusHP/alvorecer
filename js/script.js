@@ -4,5 +4,5 @@ import DeslocamentoAteOAlvo from './modules/anima-deslocamento-ate-alvo.js';
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
 
-const deslocamentoAteOAlvo = new DeslocamentoAteOAlvo('[data-deslocamento-scroll]');
+const deslocamentoAteOAlvo = new DeslocamentoAteOAlvo('[data-deslocamento-ate-alvo]');
 deslocamentoAteOAlvo.init();

@@ -29,7 +29,7 @@ export default class DeslocamentoAteOAlvo {
   deslocaAteOAlvo(event) {
     event.preventDefault();
     const botaoAcionador = event.currentTarget;
-    const seletor = botaoAcionador.dataset.deslocamentoScroll;
+    const seletor = botaoAcionador.dataset.deslocamentoAteAlvo;
     
     const elementoAlvo = document.querySelector(seletor);
 
