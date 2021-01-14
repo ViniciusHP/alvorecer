@@ -29,10 +29,11 @@ export default class DeslocamentoScroll {
   deslocaAteOAlvo(event) {
     event.preventDefault();
     const botaoAcionador = event.currentTarget;
-    const idAlvo = botaoAcionador.dataset.deslocamentoScroll;
+    const seletor = botaoAcionador.dataset.deslocamentoScroll;
     
-    if(idAlvo.startsWith('#')){
-      const elementoAlvo = document.querySelector(idAlvo);
+    const elementoAlvo = document.querySelector(seletor);
+
+    if(elementoAlvo){
       elementoAlvo.scrollIntoView(this.scrollIntoViewOptions);
     }
   }
