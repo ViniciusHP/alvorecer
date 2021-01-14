@@ -6,6 +6,7 @@
     height: 36px;
     color: #816B5F;
     border-top: 4px solid;
+    cursor: pointer;
   }
 
   .mobile-btn::after, .mobile-btn::before {
