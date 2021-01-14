@@ -1,4 +1,4 @@
-export default class DeslocamentoScroll {
+export default class DeslocamentoAteOAlvo {
   constructor(botoesAcionadores, scrollIntoViewOptions) {
     this.botoesAcionadoresDeslocamento = document.querySelectorAll(botoesAcionadores);
     
