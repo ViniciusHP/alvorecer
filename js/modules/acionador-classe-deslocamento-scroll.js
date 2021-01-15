@@ -12,11 +12,12 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     }
 
     this.acionaAlvoHandler = debounce(this.acionaAlvoHandler.bind(this), 100);
+    this.recarregaDadosDePosicionamento = this.recarregaDadosDePosicionamento.bind(this);
   }
 
   init() {
     if(this.elementosAcionadores.length && this.elementosAlvo.length){
-      this.extraiDados();
+      this.carregaDadosDePosicionamento();
       this.addEventAoScroll();
       this.acionaAlvoHandler();
     }
@@ -24,7 +25,7 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     return this;
   }
 
-  extraiDados() {
+  carregaDadosDePosicionamento() {
     this.dadosDePosicionamentoERelacionamento = [];
 
     this.elementosAcionadores.forEach((acionador) => {
@@ -62,6 +63,7 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
 
   addEventAoScroll(){
     window.addEventListener('scroll', this.acionaAlvoHandler);
+    window.addEventListener('resize', this.recarregaDadosDePosicionamento);
   }
 
   acionaAlvoHandler() {
@@ -74,5 +76,10 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
         dados.alvo.classList.remove(this.activeClass);
       }
     })
+  }
+
+  recarregaDadosDePosicionamento() {
+    this.carregaDadosDePosicionamento();
+    this.acionaAlvoHandler();
   }
 }
