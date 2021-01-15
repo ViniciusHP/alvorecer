@@ -1,3 +1,5 @@
+import debounce from './debouce.js';
+
 export default class AcionadorDeClasseAoDeslocamentoScroll {
   constructor(elementosAcionadores, elementosAlvo, activeClass) {
     this.elementosAcionadores = document.querySelectorAll(elementosAcionadores);
@@ -9,13 +11,14 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
       this.activeClass = 'ativo';
     }
 
-    this.acionaAlvoHandler = this.acionaAlvoHandler.bind(this);
+    this.acionaAlvoHandler = debounce(this.acionaAlvoHandler.bind(this), 100);
   }
 
   init() {
     if(this.elementosAcionadores.length && this.elementosAlvo.length){
       this.extraiDados();
       this.addEventAoScroll();
+      this.acionaAlvoHandler();
     }
 
     return this;
@@ -63,7 +66,7 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
 
   acionaAlvoHandler() {
     const currentPageYOffset = window.pageYOffset;
-    const quarter = window.outerHeight / 4; 
+    const quarter = window.outerHeight / 4;
     this.dadosDePosicionamentoERelacionamento.forEach((dados) => {
       if(dados.inicio - quarter < currentPageYOffset && dados.fim - quarter > currentPageYOffset){
         dados.alvo.classList.add(this.activeClass);
