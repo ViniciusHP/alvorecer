@@ -36,7 +36,8 @@ body {
   padding: 15px 20px;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.ativo {
   color: #D8AA75;
 }
 
