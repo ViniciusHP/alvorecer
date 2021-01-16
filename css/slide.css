@@ -9,6 +9,7 @@
 
 .slide {
   display: flex;
+  transition: .7s ease-in-out;
 }
 
 .slide-item {
