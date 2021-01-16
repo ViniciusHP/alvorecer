@@ -2,6 +2,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import DeslocamentoAteOAlvo from './modules/anima-deslocamento-ate-alvo.js';
 import AcionadorDeClasseAoDeslocamentoScroll from './modules/acionador-classe-deslocamento-scroll.js';
 import Slide from './modules/slide.js';
+import TabNav from './modules/tab-nav.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -16,3 +17,6 @@ acionadorDeClasseAoDeslocamentoScroll.init();
 const slide = new Slide('[data-slide]', '[data-slide-item]',
         '[data-slide-controls]', '[data-slide-controls-botao]', 5000);
 slide.init();
+
+const tabNav = new TabNav('[data-tab-nav="acionador"]','[data-tab-nav="alvo"]');
+tabNav.init();
