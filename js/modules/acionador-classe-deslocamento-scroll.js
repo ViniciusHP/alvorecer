@@ -17,9 +17,12 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
 
   init() {
     if(this.elementosAcionadores.length && this.elementosAlvo.length){
-      this.carregaDadosDePosicionamento();
-      this.addEventAoScroll();
-      this.acionaAlvoHandler();
+      // Espera que todos componentes sejam carregados para depois calcular as distâncias
+      setTimeout(() => {
+        this.carregaDadosDePosicionamento();
+        this.addEventAoScroll();
+        this.acionaAlvoHandler();
+      }, 200);
     }
 
     return this;
@@ -30,16 +33,26 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
 
     this.elementosAcionadores.forEach((acionador) => {
 
-      const inicio = acionador.offsetTop;
+      let inicio = acionador.offsetTop;
       const altura = acionador.offsetHeight;
-      const fim = inicio + altura;
+      let fim = inicio + altura;
+
+      const umQuartoDaTela = window.outerHeight / 4;
+      const alturaMenuBar = document.querySelector(".barra-menu").offsetHeight;
+
+      if(alturaMenuBar) {
+        inicio -= alturaMenuBar;
+        fim -= alturaMenuBar;
+      }
+      inicio -= umQuartoDaTela;
+      fim -= umQuartoDaTela;
+
       const nomeAlvo = acionador.dataset.acionarAoScrollAcionador;
       const alvo = this.obtemElementoAlvoCorrespondenteAoNome(nomeAlvo);
 
       const dados = {
         acionador,
         inicio,
-        altura,
         fim,
         alvo,
       };
@@ -67,13 +80,18 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
   }
 
   acionaAlvoHandler() {
-    const currentPageYOffset = window.pageYOffset;
-    const quarter = window.outerHeight / 4;
+    const currentPageYOffset = Math.floor(window.pageYOffset);
     this.dadosDePosicionamentoERelacionamento.forEach((dados) => {
-      if(dados.inicio - quarter < currentPageYOffset && dados.fim - quarter > currentPageYOffset){
+
+      const inicio = dados.inicio;
+      const fim = dados.fim;
+
+      if(currentPageYOffset > inicio && currentPageYOffset < fim){
         dados.alvo.classList.add(this.activeClass);
+        dados.acionador.classList.add(this.activeClass);
       }else{
         dados.alvo.classList.remove(this.activeClass);
+        dados.acionador.classList.remove(this.activeClass);
       }
     })
   }
