@@ -3,6 +3,7 @@ import DeslocamentoAteOAlvo from './modules/anima-deslocamento-ate-alvo.js';
 import AcionadorDeClasseAoDeslocamentoScroll from './modules/acionador-classe-deslocamento-scroll.js';
 import Slide from './modules/slide.js';
 import TabNav from './modules/tab-nav.js';
+import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -20,3 +21,5 @@ slide.init();
 
 const tabNav = new TabNav('[data-tab-nav="acionador"]','[data-tab-nav="alvo"]');
 tabNav.init();
+
+fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
