@@ -4,6 +4,7 @@ import AcionadorDeClasseAoDeslocamentoScroll from './modules/acionador-classe-de
 import Slide from './modules/slide.js';
 import TabNav from './modules/tab-nav.js';
 import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
+import Accordion from './modules/accordion.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -23,3 +24,6 @@ const tabNav = new TabNav('[data-tab-nav="acionador"]','[data-tab-nav="alvo"]');
 tabNav.init();
 
 fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
+
+const accordion = new Accordion('[data-accordion-item]');
+accordion.init();

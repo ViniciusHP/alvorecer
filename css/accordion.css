@@ -17,16 +17,22 @@
 .faq-section .pergunta::before{
   content: '►';
   margin-right: 5px;
+  transition: .3s;
 }
 
 .faq-section .pergunta.ativo::before{
   content: '▼';
 }
 
-.faq-section .resposta {
-  display: none;
+/* Animação */
+
+[data-accordion] .resposta {
+  height: 0;
+  padding-top: 5px;
+  transition: .5s all ease-in-out;
+  overflow: hidden;
 }
 
-.faq-section .resposta.ativo {
-  display: block;
+[data-accordion] .resposta.ativo {
+  height: 200px;
 }
