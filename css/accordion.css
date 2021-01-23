@@ -15,13 +15,17 @@
 }
 
 .faq-section .pergunta::before{
-  content: '►';
+  content: '';
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: url('../img/icones/arrow-right.svg') center center;
   margin-right: 5px;
   transition: .3s;
 }
 
 .faq-section .pergunta.ativo::before{
-  content: '▼';
+  transform: rotate(90deg);
 }
 
 /* Animação */
