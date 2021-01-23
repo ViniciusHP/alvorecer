@@ -27,3 +27,4 @@ fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
 
 const accordion = new Accordion('[data-accordion-item]');
 accordion.init();
+accordion.addCallbackAccordionToggle(() => acionadorDeClasseAoDeslocamentoScroll.recarregaDadosDePosicionamento());

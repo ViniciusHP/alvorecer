@@ -97,7 +97,9 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
   }
 
   recarregaDadosDePosicionamento() {
+    setTimeout(() => {
     this.carregaDadosDePosicionamento();
     this.acionaAlvoHandler();
+    }, 1000);
   }
 }

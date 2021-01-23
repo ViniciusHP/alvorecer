@@ -8,6 +8,8 @@ export default class Accordion {
       this.classeAtiva = classeAtiva;
     }
 
+    this.callbackAccordionToggle = [];
+
     this.acionadorHandler = this.acionadorHandler.bind(this);
   }
 
@@ -36,7 +38,18 @@ export default class Accordion {
       if(acionador && alvo){
         acionador.classList.toggle(this.classeAtiva);
         alvo.classList.toggle(this.classeAtiva);
+        this.executeAllCallbacksAccordionToggle();
       }
     }
+  }
+
+  addCallbackAccordionToggle(callback){
+    this.callbackAccordionToggle.push(callback);
+  }
+
+  executeAllCallbacksAccordionToggle(){
+    this.callbackAccordionToggle.forEach((callback) => {
+      callback();
+    });
   }
 }
