@@ -10,8 +10,8 @@ export default async function fetchNumeroVisitantes(url, elementoAlvo){
     if(numeroVisitantes !== undefined){
       elemento.innerHTML = json.numeroVisitantes;
     }
-      
-    const animaNumeroVisitantes = new AnimaNumero('#opinioes-section', 'ativo', '[data-anima-numeros]', 2000);
-    animaNumeroVisitantes.init();
   }
+  
+  const animaNumeroVisitantes = new AnimaNumero('#opinioes-section', 'ativo', '[data-anima-numeros]', 2000);
+  animaNumeroVisitantes.init();
 }
