@@ -5,6 +5,7 @@ import Slide from './modules/slide.js';
 import TabNav from './modules/tab-nav.js';
 import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
 import Accordion from './modules/accordion.js';
+import Tooltip from './modules/tooltip.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -28,3 +29,6 @@ fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
 const accordion = new Accordion('[data-accordion-item]');
 accordion.init();
 accordion.addCallbackAccordionToggle(() => acionadorDeClasseAoDeslocamentoScroll.recarregaDadosDePosicionamento());
+
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
