@@ -11,6 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body>
+    <div id="modal-login" class="modal-container">
+      <div class="modal">
+        <a class="btn-close-modal" data-modal-close></a>
+        <form class="modal-form" method="POST">
+          <div class="form-group">
+            <input type="text" id="email" name="email" />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="senha" name="senha" />
+            <label for="senha">Senha</label>
+          </div>
+          <p class="form-info">Esqueceu sua senha? <a href="#" id="recuperar-senha">Clique aqui.</a></p>
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="manter-conectado" name="manter-conectado"/>
+            <label for="manter-conectado">Me mantenha conectado.</label>
+          </div>
+          <div class="submit-btn-container">
+            <input type="submit" value="Entrar" />
+          </div>
+        </form>
+      </div>
+    </div>
     <header class="barra-menu">
       <div class="logo-container">
         <a href="/" data-deslocamento-ate-alvo="body"><img src="img/logo.svg" alt="Alvorecer"></a>
@@ -30,7 +53,7 @@
               <li><a href="local.html">Local</a></li>
             </ul>
           </li>
-          <li><a class="login" href="login.html">Login</a></li>
+          <li><a class="login" href="login.html" data-modal="#modal-login">Login</a></li>
         </ul>
       </nav>
     </header>

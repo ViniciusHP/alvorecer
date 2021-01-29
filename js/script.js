@@ -6,6 +6,7 @@ import TabNav from './modules/tab-nav.js';
 import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
 import Accordion from './modules/accordion.js';
 import Tooltip from './modules/tooltip.js';
+import Modal from './modules/modal.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -32,3 +33,6 @@ accordion.addCallbackAccordionToggle(() => acionadorDeClasseAoDeslocamentoScroll
 
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
+
+const modal = new Modal('[data-modal]','[data-modal-close]', 'ativo');
+modal.init();
