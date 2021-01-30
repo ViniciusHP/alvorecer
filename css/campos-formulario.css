@@ -1,0 +1,71 @@
+.form-group {
+  position: relative;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 2rem;
+  position: absolute;
+  top: 2.3125rem;
+  left: 5px;
+  color: #D8AA75;
+  transition: .3s all ease-in-out;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  margin-top: 2rem;
+  border: none;
+  border-bottom: 2px solid #816B5F;
+  background: transparent;
+  font-size: 1.8rem;
+  padding: 5px;
+  color: #816B5F;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+  border-color: #D8AA75;
+}
+
+.form-group input[type="text"]:focus ~ label,
+.form-group input[type="password"]:focus ~ label,
+.form-group input[type="text"].preenchido ~ label,
+.form-group input[type="password"].preenchido ~ label {
+  font-size: 1rem;
+  top: 0px;
+}
+
+.submit-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.submit-btn-container input[type="submit"]{
+  font-size: 1.5rem;
+  color: #F0E5CF;
+  background: #D8AA75;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  width: 150px;
+}
+
+.form-info{
+  font-size: 0.875rem;
+}
+
+.form-group-checkbox {
+  margin: 33px 0;
+  font-size: 1rem;
+}

@@ -7,6 +7,7 @@ import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
 import Accordion from './modules/accordion.js';
 import Tooltip from './modules/tooltip.js';
 import Modal from './modules/modal.js';
+import AnimaTituloCampoFormulario from './modules/anima-titulo-campos-formulario.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -36,3 +37,6 @@ tooltip.init();
 
 const modal = new Modal('[data-modal]','[data-modal-close]', 'ativo');
 modal.init();
+
+const animaTitulosFormulario = new AnimaTituloCampoFormulario('[data-anime="titulo-formulario"]', 'preenchido');
+animaTitulosFormulario.init();
