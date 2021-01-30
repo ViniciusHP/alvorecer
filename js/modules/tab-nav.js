@@ -9,6 +9,8 @@ export default class TabNav {
       this.classeAtiva = classeAtiva;
     }
 
+    this.callbackTabNavChange = [];
+
     this.acionadorHandler = this.acionadorHandler.bind(this);
   }
 
@@ -36,6 +38,7 @@ export default class TabNav {
 
     this.desacionarTodos();
     this.acionar(acionador, alvo);
+    this.executeAllCallbacksTabNavChange();
   }
 
   acionar(acionador, alvo){
@@ -46,5 +49,15 @@ export default class TabNav {
   desacionarTodos(){
     this.acionadores.forEach(acionador => acionador.classList.remove(this.classeAtiva));
     this.alvos.forEach(alvo => alvo.classList.remove(this.classeAtiva));
+  }
+
+  addCallbackTabNavChange(callback){
+    this.callbackTabNavChange.push(callback);
+  }
+
+  executeAllCallbacksTabNavChange(){
+    this.callbackTabNavChange.forEach((callback) => {
+      callback();
+    });
   }
 }

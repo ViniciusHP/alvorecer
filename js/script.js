@@ -25,6 +25,7 @@ slide.init();
 
 const tabNav = new TabNav('[data-tab-nav="acionador"]','[data-tab-nav="alvo"]');
 tabNav.init();
+tabNav.addCallbackTabNavChange(() => acionadorDeClasseAoDeslocamentoScroll.recarregaDadosDePosicionamento());
 
 fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
 
