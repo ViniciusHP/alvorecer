@@ -6,6 +6,7 @@
     height: 36px;
     color: #816B5F;
     border-top: 4px solid;
+    cursor: pointer;
   }
 
   .mobile-btn::after, .mobile-btn::before {
@@ -39,27 +40,31 @@
     transform: rotate(45deg);
   }
 
-  .nav-menu-container {
+  .menu-mobile-container {
     display: block;
     position: absolute;
     right: 0;
     top: 68px;
-  }
-
-  .menu-mobile {
     width: 170px;
-    display: block;
     background: #F0E5CF;
     box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1),
               0 5px 5px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
     opacity: 0;
     visibility: hidden;
+    transform: translate3d(170px, 0, 0);
+    transition: .5s ease-in-out;
   }
 
-  .menu-mobile.ativo {
+  .menu-mobile-container.ativo {
     opacity: 1;
     visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .menu-mobile {
+    width: 170px;
+    display: block;
   }
 
   .menu-mobile>li {

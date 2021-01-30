@@ -11,18 +11,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
   </head>
   <body>
+    <div id="modal-login" class="modal-container">
+      <div class="modal">
+        <a class="btn-close-modal" data-modal-close></a>
+        <form class="modal-form" method="POST">
+          <div class="form-group">
+            <input type="text" id="email" name="email" />
+            <label for="email" data-anime="titulo-formulario">Email</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="senha" name="senha" />
+            <label for="senha" data-anime="titulo-formulario">Senha</label>
+          </div>
+          <p class="form-info">Esqueceu sua senha? <a href="#" id="recuperar-senha">Clique aqui.</a></p>
+          <div class="form-group-checkbox">
+            <input type="checkbox" id="manter-conectado" name="manter-conectado"/>
+            <label for="manter-conectado">Me mantenha conectado.</label>
+          </div>
+          <div class="submit-btn-container">
+            <input type="submit" value="Entrar" />
+          </div>
+        </form>
+      </div>
+    </div>
     <header class="barra-menu">
       <div class="logo-container">
-        <a href="/"><img src="img/logo.svg" alt="Alvorecer"></a>
+        <a href="/" data-deslocamento-ate-alvo="body"><img src="img/logo.svg" alt="Alvorecer"></a>
       </div>
-      <span class="mobile-btn"></span>
-      <nav class="nav-menu-container">
+      <span class="mobile-btn" data-menu-mobile-btn></span>
+      <nav class="nav-menu-container menu-mobile-container" data-menu-mobile>
         <ul class="nav-menu menu-mobile">
-          <li><a href="#aproveite-section">Aproveite</a></li>
-          <li><a href="#locais-section">Locais</a></li>
-          <li><a href="#opinioes-section">Opiniões</a></li>
-          <li><a href="#faq-section">FAQ</a></li>
-          <li><a href="#contato-section">Contato</a></li>
+          <li><a href="#aproveite-section" data-deslocamento-ate-alvo="#aproveite-section" data-acionar-ao-scroll-alvo="aproveite">Aproveite</a></li>
+          <li><a href="#locais-section" data-deslocamento-ate-alvo="#locais-section" data-acionar-ao-scroll-alvo="locais">Locais</a></li>
+          <li><a href="#opinioes-section" data-deslocamento-ate-alvo="#opinioes-section" data-acionar-ao-scroll-alvo="opinioes">Opiniões</a></li>
+          <li><a href="#faq-section" data-deslocamento-ate-alvo="#faq-section" data-acionar-ao-scroll-alvo="faq">FAQ</a></li>
+          <li><a href="#contato-section" data-deslocamento-ate-alvo="#contato-section" data-acionar-ao-scroll-alvo="contato">Contato</a></li>
           <li>
             <a href="sobre.html">Sobre</a>
             <ul class="dropdown-menu">
@@ -30,51 +53,51 @@
               <li><a href="local.html">Local</a></li>
             </ul>
           </li>
-          <li><a class="login" href="login.html">Login</a></li>
+          <li><a class="login" href="login.html" data-modal="#modal-login">Login</a></li>
         </ul>
       </nav>
     </header>
     <section id="slide-section">
       <div class="slide-wrapper">
-        <ol class="slide">
-          <li class="slide-item">
+        <ol class="slide" data-slide>
+          <li id="slide1" class="slide-item" data-slide-item>
               <img src="img/slide/Cachoeira.jpg" alt="Cachoeira">
               <h2 class="slide-caption">Cachoeira</h2>
           </li>
-          <li class="slide-item">
+          <li id="slide2" class="slide-item" data-slide-item>
               <img src="img/slide/Acampamento.jpg" alt="Acampamento">
               <h2 class="slide-caption">Acampamento</h2>
           </li>
-          <li class="slide-item">
+          <li id="slide3" class="slide-item" data-slide-item>
               <img src="img/slide/Ceu-noturno.jpg" alt="Céu noturno">
               <h2 class="slide-caption">Céu noturno</h2>
           </li>
-          <li class="slide-item">
+          <li id="slide4" class="slide-item" data-slide-item>
               <img src="img/slide/Floresta.jpg" alt="Floresta">
               <h2 class="slide-caption">Floresta</h2>
           </li>
-          <li class="slide-item">
+          <li id="slide5" class="slide-item" data-slide-item>
               <img src="img/slide/Lago.jpg" alt="Lago">
               <h2 class="slide-caption">Lago</h2>
           </li>
-          <li class="slide-item">
+          <li id="slide6" class="slide-item" data-slide-item>
               <img src="img/slide/Montanha.jpg" alt="Montanha">
               <h2 class="slide-caption">Montanha</h2>
           </li>
         </ol>
       </div>
       <div class="controls-wrapper">
-        <ol class="slide-controls">
-          <li><a href="#slide1">Slide 1</a></li>
-          <li><a href="#slide2">Slide 2</a></li>
-          <li><a href="#slide3">Slide 3</a></li>
-          <li><a href="#slide4">Slide 4</a></li>
-          <li><a href="#slide5">Slide 5</a></li>
-          <li><a href="#slide6">Slide 6</a></li>
+        <ol class="slide-controls" data-slide-controls>
+          <li><a href="#slide1" data-slide-controls-botao>Slide 1</a></li>
+          <li><a href="#slide2" data-slide-controls-botao>Slide 2</a></li>
+          <li><a href="#slide3" data-slide-controls-botao>Slide 3</a></li>
+          <li><a href="#slide4" data-slide-controls-botao>Slide 4</a></li>
+          <li><a href="#slide5" data-slide-controls-botao>Slide 5</a></li>
+          <li><a href="#slide6" data-slide-controls-botao>Slide 6</a></li>
         </ol>
       </div>
     </section>
-    <section id="aproveite-section" class="aproveite-section">
+    <section id="aproveite-section" class="aproveite-section" data-acionar-ao-scroll-acionador="aproveite">
       <div class="titulo-container">
         <h2 class="titulo-section">Aproveite</h2>
         <span class="subtitulo-section">Tudo do melhor</span>
@@ -103,19 +126,19 @@
         </div>
       </div>
     </section>
-    <section id="locais-section" class="locais-section">
+    <section id="locais-section" class="locais-section" data-acionar-ao-scroll-acionador="locais">
       <div class="container-960">
         <div class="titulo-container">
           <h2 class="titulo-section">Locais</h2>
           <span class="subtitulo-section">Veja alguns de nossos locais!</span>
         </div>
         <ul class="tab-nav">
-          <li><a class="ativo" href="#cachoeira">Cachoeira</a></li>
-          <li><a href="#lago">Lago</a></li>
-          <li><a href="#floresta">Floresta</a></li>
-          <li><a href="#montanha">Montanha</a></li>
+          <li><a href="#cachoeira" data-tab-nav="acionador">Cachoeira</a></li>
+          <li><a href="#lago"  data-tab-nav="acionador">Lago</a></li>
+          <li><a href="#floresta"  data-tab-nav="acionador">Floresta</a></li>
+          <li><a href="#montanha"  data-tab-nav="acionador">Montanha</a></li>
         </ul>
-        <div id="cachoeira" class="tab-nav-item ativo">
+        <div id="cachoeira" class="tab-nav-item" data-tab-nav="alvo">
           <div class="tab-nav-card-imagem">
             <img src="img/cachoeira.jpg" alt="Cachoeira">
           </div>
@@ -124,7 +147,7 @@
             <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="lago" class="tab-nav-item">
+        <div id="lago" class="tab-nav-item" data-tab-nav="alvo">
           <div class="tab-nav-card-imagem">
             <img src="img/lago.jpg" alt="Lago">
           </div>
@@ -133,7 +156,7 @@
             <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="floresta" class="tab-nav-item">
+        <div id="floresta" class="tab-nav-item" data-tab-nav="alvo">
           <div class="tab-nav-card-imagem">
             <img src="img/floresta.jpg" alt="Floresta">
           </div>
@@ -142,7 +165,7 @@
             <p class="tab-nav-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique nulla aliquet enim tortor at auctor. Ipsum dolor sit amet consectetur adipiscing elit. Interdum velit euismod in pellentesque massa placerat. Nibh praesent tristique magna sit amet purus gravida quis blandit. Sit amet luctus venenatis lectus magna fringilla. Nunc sed id semper risus in hendrerit gravida rutrum. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vel facilisis volutpat est velit egestas dui id ornare. Fermentum et sollicitudin ac orci phasellus. Ut tellus elementum sagittis vitae et. Vel orci porta non pulvinar neque laoreet. Egestas purus viverra accumsan in nisl nisi scelerisque. Nunc sed id semper risus in hendrerit gravida.</p>
           </div>
         </div>
-        <div id="montanha" class="tab-nav-item">
+        <div id="montanha" class="tab-nav-item" data-tab-nav="alvo">
           <div class="tab-nav-card-imagem">
             <img src="img/montanha.jpg" alt="Montanha">
           </div>
@@ -153,7 +176,7 @@
         </div>
       </div>
     </section>
-    <section id="opinioes-section" class="opinioes-section">
+    <section id="opinioes-section" class="opinioes-section" data-acionar-ao-scroll-acionador="opinioes">
       <div class="container-960">
         <h2 class="titulo-section titulo-section-sozinho">Opiniões</h2>
         <div class="opiniao-item">
@@ -176,45 +199,45 @@
         </div>
         <div class="numero-visitantes-container">
           <h3>Número de visitantes</h3>
-          <span>1526989987</span>
+          <span data-numero-visitantes data-anima-numeros>1526989987</span>
         </div>
       </div>
     </section>
-    <section id="faq-section" class="faq-section">
+    <section id="faq-section" class="faq-section" data-acionar-ao-scroll-acionador="faq">
       <div class="container-960">
         <h2 class="titulo-section titulo-section-sozinho">Perguntas Frequentes</h2>
-        <div class="perguntas-container">
+        <div class="perguntas-container" data-accordion>
           <div class="bloco-pergunta">
-            <a class="pergunta ativo" href="#pergunta1">Pergunta 1</a>
+            <a class="pergunta ativo" href="#pergunta1" data-accordion-item>Pergunta 1</a>
             <div id="pergunta1" class="resposta ativo">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
             </div>
           </div>
           <div class="bloco-pergunta">
-            <a class="pergunta" href="#pergunta2">Pergunta 2</a>
+            <a class="pergunta" href="#pergunta2" data-accordion-item>Pergunta 2</a>
             <div id="pergunta2" class="resposta">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
             </div>
           </div>
           <div class="bloco-pergunta">
-            <a class="pergunta" href="#pergunta3">Pergunta 3</a>
+            <a class="pergunta" href="#pergunta3" data-accordion-item>Pergunta 3</a>
             <div id="pergunta3" class="resposta">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
             </div>
           </div>
           <div class="bloco-pergunta">
-            <a class="pergunta" href="#pergunta4">Pergunta 4</a>
+            <a class="pergunta" href="#pergunta4" data-accordion-item>Pergunta 4</a>
             <div id="pergunta4" class="resposta">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Diam ut venenatis tellus in metus vulputate eu. Eget duis at tellus at urna condimentum mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Lobortis feugiat vivamus at augue eget. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. Auctor urna nunc id cursus metus aliquam eleifend mi.</p>
             </div>
           </div>
         </div>
     </section>
-    <section id="contato-section" class="contato-section">
+    <section id="contato-section" class="contato-section" data-acionar-ao-scroll-acionador="contato">
       <div class="container-960">
         <h2 class="titulo-section titulo-section-sozinho">Contato</h2>
         <div class="dados-contato-container">
-          <div class="mapa-container">
+          <div class="mapa-container" data-tooltip aria-label="Próximo ao residencial.">
             <img src="img/mapa.jpg" alt="Mapa">
           </div>
           <ul class="lista-dados-contatos">
