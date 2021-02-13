@@ -6,18 +6,48 @@ section .titulo-container {
 
 section.show .titulo-section,
 section.show .titulo-container {
-  animation: animacao-titulos .5s forwards;
+  animation: anima-para-baixo .5s forwards;
+}
+/* Fim animação Títulos das seções */
+
+/* Animação Cards da seção aproveite */ 
+#aproveite-section .card{
+  opacity: 0;
+  visibility: 0;
 }
 
-@keyframes animacao-titulos {
-  from {
+.show .anima-para-cima{
+  animation: anima-para-cima .7s forwards;
+}
+
+.show .anima-para-baixo{
+  animation: anima-para-baixo .7s forwards;
+}
+
+/* Animações que serão reaproveitadas */
+@keyframes anima-para-cima {
+  from{
     opacity: 0;
-    transform: translate3d(0, -20px, 0);
+    visibility: 0;
+    transform: translate3d(0, 20px, 0);
   }
   to {
     opacity: 1;
+    visibility: 1;
     transform: translate3d(0, 0, 0);
   }
 }
 
-/* Fim animação Títulos das seções */
+@keyframes anima-para-baixo {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* Fim das animações que serão reaproveitadas */
