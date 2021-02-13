@@ -32,11 +32,12 @@
 
 [data-accordion] .resposta {
   height: 0;
-  padding-top: 5px;
-  transition: .5s all ease-in-out;
-  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
 }
 
 [data-accordion] .resposta.ativo {
-  height: 200px;
+  height: auto;
+  transform: scaleY(1);
 }
