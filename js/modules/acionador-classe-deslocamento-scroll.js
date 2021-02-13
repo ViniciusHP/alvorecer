@@ -1,7 +1,7 @@
 import debounce from './debouce.js';
 
 export default class AcionadorDeClasseAoDeslocamentoScroll {
-  constructor(elementosAcionadores, elementosAlvo, activeClass) {
+  constructor(elementosAcionadores, elementosAlvo, activeClass, showClass) {
     this.elementosAcionadores = document.querySelectorAll(elementosAcionadores);
     this.elementosAlvo = document.querySelectorAll(elementosAlvo);
 
@@ -9,6 +9,12 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
       this.activeClass = activeClass;
     }else{
       this.activeClass = 'ativo';
+    }
+
+    if(showClass !== undefined){
+      this.showClass = showClass;
+    }else{
+      this.showClass = 'show';
     }
 
     this.acionaAlvoHandler = debounce(this.acionaAlvoHandler.bind(this), 100);
@@ -89,6 +95,7 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
       if(currentPageYOffset > inicio && currentPageYOffset < fim){
         dados.alvo.classList.add(this.activeClass);
         dados.acionador.classList.add(this.activeClass);
+        dados.acionador.classList.add(this.showClass);
       }else{
         dados.alvo.classList.remove(this.activeClass);
         dados.acionador.classList.remove(this.activeClass);

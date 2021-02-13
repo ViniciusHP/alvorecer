@@ -1,0 +1,23 @@
+/* Animação Títulos das seções */
+section .titulo-section,
+section .titulo-container {
+  opacity: 0;
+}
+
+section.show .titulo-section,
+section.show .titulo-container {
+  animation: animacao-titulos .5s forwards;
+}
+
+@keyframes animacao-titulos {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Fim animação Títulos das seções */
