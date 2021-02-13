@@ -66,7 +66,7 @@ export default class Tooltip {
     let tooltipLeft;
 
     if(left > halfWindowWidth){
-      tooltipLeft = left - positionOffsetX - 200;
+      tooltipLeft = left - positionOffsetX - 260;
     }else {
       tooltipLeft = left + positionOffsetX;
     }
