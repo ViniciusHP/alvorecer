@@ -22,6 +22,7 @@
 
 .slide-item img {
   width: 100vw;
+  filter: brightness(70%);
 }
 
 .slide-item .slide-caption {
