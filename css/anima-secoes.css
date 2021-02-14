@@ -15,7 +15,8 @@ section.show .titulo-container {
 #locais-section .tab-nav,
 #locais-section .tab-nav-content-container,
 #opinioes-section .opiniao-item,
-#opinioes-section .numero-visitantes-container {
+#opinioes-section .numero-visitantes-container,
+#faq-section .perguntas-container {
   opacity: 0;
   visibility: 0;
 }
