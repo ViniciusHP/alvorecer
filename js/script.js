@@ -41,3 +41,8 @@ modal.init();
 
 const animaTitulosFormulario = new AnimaTituloCampoFormulario('[data-anime="titulo-formulario"]', 'preenchido');
 animaTitulosFormulario.init();
+
+/* Removendo o redirecionamento para páginas que ainda não existem */
+document.querySelectorAll('a[href$=".html"]').forEach((a) => {
+    a.addEventListener('click', (event) => event.preventDefault());
+})
