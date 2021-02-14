@@ -13,7 +13,9 @@ section.show .titulo-container {
 /* Ocultando os itens das seções */ 
 #aproveite-section .card,
 #locais-section .tab-nav,
-#locais-section .tab-nav-content-container {
+#locais-section .tab-nav-content-container,
+#opinioes-section .opiniao-item,
+#opinioes-section .numero-visitantes-container {
   opacity: 0;
   visibility: 0;
 }
