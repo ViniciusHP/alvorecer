@@ -27,6 +27,14 @@ section.show .titulo-container {
 .show .anima-para-baixo{
   animation: anima-para-baixo .7s forwards;
 }
+
+.show .anima-para-esquerda {
+  animation: anima-para-esquerda .7s forwards;
+}
+
+.show .anima-para-direita {
+  animation: anima-para-direita .7s forwards;
+}
 /* Fim classes para animação */
 
 /* Animações que serão reaproveitadas */
@@ -48,6 +56,32 @@ section.show .titulo-container {
     opacity: 0;
     visibility: 0;
     transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anima-para-esquerda {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(+20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anima-para-direita {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(-20px, 0, 0);
   }
   to {
     opacity: 1;
