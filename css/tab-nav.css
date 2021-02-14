@@ -70,7 +70,7 @@
   font-size: 1rem;
 }
 
-.locais-section .tab-nav-item {
+.js .locais-section .tab-nav-item {
   display: inline;
   position: absolute;
   top: -9999px;
@@ -83,7 +83,7 @@
 
 /* Animações */
 
-.tab-nav-item{
+.js .tab-nav-item{
   transform: translate3d(0, -50px, 0);
   opacity: 0;
   transition: .5s linear;
