@@ -16,7 +16,9 @@ section.show .titulo-container {
 #locais-section .tab-nav-content-container,
 #opinioes-section .opiniao-item,
 #opinioes-section .numero-visitantes-container,
-#faq-section .perguntas-container {
+#faq-section .perguntas-container,
+#contato-section .mapa-container,
+#contato-section .lista-dados-contatos {
   opacity: 0;
   visibility: 0;
 }
