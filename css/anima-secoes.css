@@ -1,0 +1,97 @@
+/* Animação Títulos das seções */
+section .titulo-section,
+section .titulo-container {
+  opacity: 0;
+}
+
+section.show .titulo-section,
+section.show .titulo-container {
+  animation: anima-para-baixo .5s forwards;
+}
+/* Fim animação Títulos das seções */
+
+/* Ocultando os itens das seções */ 
+#aproveite-section .card,
+#locais-section .tab-nav,
+#locais-section .tab-nav-content-container,
+#opinioes-section .opiniao-item,
+#opinioes-section .numero-visitantes-container,
+#faq-section .perguntas-container,
+#contato-section .mapa-container,
+#contato-section .lista-dados-contatos {
+  opacity: 0;
+  visibility: 0;
+}
+/* Fim ocultando os itens das seções */ 
+
+/* Classes para animação */
+.show .anima-para-cima{
+  animation: anima-para-cima .7s forwards;
+}
+
+.show .anima-para-baixo{
+  animation: anima-para-baixo .7s forwards;
+}
+
+.show .anima-para-esquerda {
+  animation: anima-para-esquerda .7s forwards;
+}
+
+.show .anima-para-direita {
+  animation: anima-para-direita .7s forwards;
+}
+/* Fim classes para animação */
+
+/* Animações que serão reaproveitadas */
+@keyframes anima-para-cima {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anima-para-baixo {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anima-para-esquerda {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(+20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes anima-para-direita {
+  from{
+    opacity: 0;
+    visibility: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    visibility: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* Fim das animações que serão reaproveitadas */
