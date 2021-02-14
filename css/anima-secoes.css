@@ -1,24 +1,24 @@
 /* Animação Títulos das seções */
-section .titulo-section,
-section .titulo-container {
+.js section .titulo-section,
+.js section .titulo-container {
   opacity: 0;
 }
 
-section.show .titulo-section,
-section.show .titulo-container {
+.js section.show .titulo-section,
+.js section.show .titulo-container {
   animation: anima-para-baixo .5s forwards;
 }
 /* Fim animação Títulos das seções */
 
 /* Ocultando os itens das seções */ 
-#aproveite-section .card,
-#locais-section .tab-nav,
-#locais-section .tab-nav-content-container,
-#opinioes-section .opiniao-item,
-#opinioes-section .numero-visitantes-container,
-#faq-section .perguntas-container,
-#contato-section .mapa-container,
-#contato-section .lista-dados-contatos {
+.js #aproveite-section .card,
+.js #locais-section .tab-nav,
+.js #locais-section .tab-nav-content-container,
+.js #opinioes-section .opiniao-item,
+.js #opinioes-section .numero-visitantes-container,
+.js #faq-section .perguntas-container,
+.js #contato-section .mapa-container,
+.js #contato-section .lista-dados-contatos {
   opacity: 0;
   visibility: 0;
 }

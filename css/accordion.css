@@ -30,14 +30,14 @@
 
 /* Animação */
 
-[data-accordion] .resposta {
+.js [data-accordion] .resposta {
   height: 0;
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.3s ease;
 }
 
-[data-accordion] .resposta.ativo {
+.js [data-accordion] .resposta.ativo {
   height: auto;
   transform: scaleY(1);
 }
