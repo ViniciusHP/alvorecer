@@ -10,12 +10,16 @@ section.show .titulo-container {
 }
 /* Fim animação Títulos das seções */
 
-/* Animação Cards da seção aproveite */ 
-#aproveite-section .card{
+/* Ocultando os itens das seções */ 
+#aproveite-section .card,
+#locais-section .tab-nav,
+#locais-section .tab-nav-content-container {
   opacity: 0;
   visibility: 0;
 }
+/* Fim ocultando os itens das seções */ 
 
+/* Classes para animação */
 .show .anima-para-cima{
   animation: anima-para-cima .7s forwards;
 }
@@ -23,6 +27,7 @@ section.show .titulo-container {
 .show .anima-para-baixo{
   animation: anima-para-baixo .7s forwards;
 }
+/* Fim classes para animação */
 
 /* Animações que serão reaproveitadas */
 @keyframes anima-para-cima {
