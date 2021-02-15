@@ -68,7 +68,7 @@ export default class AnimaTituloCampoFormulario {
 
   verificaSeAlgumCampoJaEstaPreenchido() {
     this.campos.forEach((campo) => {
-      this.adicionaClasseAoCampoSePreenchido();
+      this.adicionaClasseAoCampoSePreenchido(campo);
     })
   }
 
