@@ -1,0 +1,19 @@
+{
+  "name": "alvorecer",
+  "version": "1.0.0",
+  "description": "Site para demonstração de conhecimentos adquiridos de HTML, CSS e JavaScript.",
+  "scripts": {
+    "build": "webpack --mode production ./js/script.js --output-path ./",
+    "dev": "webpack --mode development --watch ./js/script.js --output-path ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusHP/alvorecer.git"
+  },
+  "author": "ViniciusHP",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.22.0",
+    "webpack-cli": "^4.5.0"
+  }
+}
