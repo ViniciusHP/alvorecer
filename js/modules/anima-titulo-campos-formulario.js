@@ -20,6 +20,7 @@ export default class AnimaTituloCampoFormulario {
       this.getCampos();
       this.addEventOnClick();
       this.addEventFieldOnFocusOut();
+      this.verificaSeAlgumCampoJaEstaPreenchido();
     }
 
     return this;
@@ -62,6 +63,16 @@ export default class AnimaTituloCampoFormulario {
   onFieldFocusOut(event) {
     const campo = event.currentTarget;
 
+    this.adicionaClasseAoCampoSePreenchido(campo);
+  }
+
+  verificaSeAlgumCampoJaEstaPreenchido() {
+    this.campos.forEach((campo) => {
+      this.adicionaClasseAoCampoSePreenchido();
+    })
+  }
+
+  adicionaClasseAoCampoSePreenchido(campo) {
     if(campo.value.length > 0){
       campo.classList.add(this.classeAtiva);
     }else{
