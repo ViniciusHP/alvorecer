@@ -1,13 +1,13 @@
 export default class DeslocamentoAteOAlvo {
   constructor(botoesAcionadores, scrollIntoViewOptions) {
     this.botoesAcionadoresDeslocamento = document.querySelectorAll(botoesAcionadores);
-    
-    if(scrollIntoViewOptions !== undefined){
+
+    if (scrollIntoViewOptions !== undefined) {
       this.scrollIntoViewOptions = scrollIntoViewOptions;
-    }else{
+    } else {
       this.scrollIntoViewOptions = {
         block: 'start',
-        behavior: 'smooth'
+        behavior: 'smooth',
       };
     }
 
@@ -15,7 +15,7 @@ export default class DeslocamentoAteOAlvo {
   }
 
   init() {
-    if(this.botoesAcionadoresDeslocamento.length){
+    if (this.botoesAcionadoresDeslocamento.length) {
       this.addEventDeslocamentoScroll();
     }
 
@@ -30,10 +30,10 @@ export default class DeslocamentoAteOAlvo {
     event.preventDefault();
     const botaoAcionador = event.currentTarget;
     const seletor = botaoAcionador.dataset.deslocamentoAteAlvo;
-    
+
     const elementoAlvo = document.querySelector(seletor);
 
-    if(elementoAlvo){
+    if (elementoAlvo) {
       elementoAlvo.scrollIntoView(this.scrollIntoViewOptions);
     }
   }
