@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Site para demonstração de conhecimentos adquiridos de HTML, CSS e JavaScript.",
   "scripts": {
-    "build": "webpack --mode production ./js/script.js --output-path ./",
-    "dev": "webpack --mode development --watch ./js/script.js --output-path ./"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
