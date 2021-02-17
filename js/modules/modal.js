@@ -1,16 +1,15 @@
 export default class Modal {
   constructor(seletorAbrirModal, seletorFecharModal, classeAtiva) {
-
     this.buttonModal = document.querySelector(seletorAbrirModal);
     this.modalContainer = document.querySelector(this.buttonModal.dataset.modal);
     this.buttonCloseModal = this.modalContainer.querySelector(seletorFecharModal);
 
-    if(classeAtiva !== undefined){
+    if (classeAtiva !== undefined) {
       this.classeAtiva = classeAtiva;
-    }else{
+    } else {
       this.classeAtiva = 'ativo';
     }
-    
+
     this.eventTypes = ['touchstart', 'click'];
 
     this.openModal = this.openModal.bind(this);
@@ -18,8 +17,7 @@ export default class Modal {
   }
 
   init() {
-
-    if(this.buttonModal && this.modalContainer && this.buttonCloseModal){
+    if (this.buttonModal && this.modalContainer && this.buttonCloseModal) {
       this.addEventOpenModal();
     }
 
@@ -52,10 +50,8 @@ export default class Modal {
     this.addEventCloseModal();
   }
 
-  closeModal(event) {
-    const target = event.target;
-    
-    if(target === this.buttonCloseModal || target === this.modalContainer){
+  closeModal({ target }) {
+    if (target === this.buttonCloseModal || target === this.modalContainer) {
       this.modalContainer.classList.remove(this.classeAtiva);
       this.removeEventCloseModal();
     }

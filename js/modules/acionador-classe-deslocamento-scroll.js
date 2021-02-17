@@ -5,15 +5,15 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     this.elementosAcionadores = document.querySelectorAll(elementosAcionadores);
     this.elementosAlvo = document.querySelectorAll(elementosAlvo);
 
-    if(activeClass !== undefined){
+    if (activeClass !== undefined) {
       this.activeClass = activeClass;
-    }else{
+    } else {
       this.activeClass = 'ativo';
     }
 
-    if(showClass !== undefined){
+    if (showClass !== undefined) {
       this.showClass = showClass;
-    }else{
+    } else {
       this.showClass = 'show';
     }
 
@@ -22,7 +22,7 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
   }
 
   init() {
-    if(this.elementosAcionadores.length && this.elementosAlvo.length){
+    if (this.elementosAcionadores.length && this.elementosAlvo.length) {
       // Espera que todos componentes sejam carregados para depois calcular as distâncias
       setTimeout(() => {
         this.carregaDadosDePosicionamento();
@@ -38,15 +38,14 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     this.dadosDePosicionamentoERelacionamento = [];
 
     this.elementosAcionadores.forEach((acionador) => {
-
       let inicio = acionador.offsetTop;
       const altura = acionador.offsetHeight;
       let fim = inicio + altura;
 
       const umQuartoDaTela = window.outerHeight / 4;
-      const alturaMenuBar = document.querySelector(".barra-menu").offsetHeight;
+      const alturaMenuBar = document.querySelector('.barra-menu').offsetHeight;
 
-      if(alturaMenuBar) {
+      if (alturaMenuBar) {
         inicio -= alturaMenuBar;
         fim -= alturaMenuBar;
       }
@@ -71,16 +70,15 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     let alvo;
 
     this.elementosAlvo.forEach((elementoAlvo) => {
-        
-      if(nome === elementoAlvo.dataset.acionarAoScrollAlvo){
+      if (nome === elementoAlvo.dataset.acionarAoScrollAlvo) {
         alvo = elementoAlvo;
       }
-    })
+    });
 
     return alvo;
   }
 
-  addEventAoScroll(){
+  addEventAoScroll() {
     window.addEventListener('scroll', this.acionaAlvoHandler);
     window.addEventListener('resize', this.recarregaDadosDePosicionamento);
   }
@@ -88,25 +86,23 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
   acionaAlvoHandler() {
     const currentPageYOffset = Math.floor(window.pageYOffset);
     this.dadosDePosicionamentoERelacionamento.forEach((dados) => {
+      const { inicio, fim } = dados;
 
-      const inicio = dados.inicio;
-      const fim = dados.fim;
-
-      if(currentPageYOffset > inicio && currentPageYOffset < fim){
+      if (currentPageYOffset > inicio && currentPageYOffset < fim) {
         dados.alvo.classList.add(this.activeClass);
         dados.acionador.classList.add(this.activeClass);
         dados.acionador.classList.add(this.showClass);
-      }else{
+      } else {
         dados.alvo.classList.remove(this.activeClass);
         dados.acionador.classList.remove(this.activeClass);
       }
-    })
+    });
   }
 
   recarregaDadosDePosicionamento() {
     setTimeout(() => {
-    this.carregaDadosDePosicionamento();
-    this.acionaAlvoHandler();
+      this.carregaDadosDePosicionamento();
+      this.acionaAlvoHandler();
     }, 1000);
   }
 }

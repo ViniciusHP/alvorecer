@@ -1,20 +1,18 @@
 export default class AnimaNumero {
-  constructor(seletorElementoASerObservado, classeASerObservada
-    , seletorElementoParaAnimar, milisegundosAnimacao) {
-    
+  constructor(seletorElementoASerObservado, classeASerObservada,
+    seletorElementoParaAnimar, milisegundosAnimacao) {
     this.elementoASerObservado = document.querySelector(seletorElementoASerObservado);
     this.classeASerObservada = classeASerObservada;
     this.elementoParaAnimar = document.querySelector(seletorElementoParaAnimar);
     this.milisegundosAnimacao = milisegundosAnimacao;
-    
+
     this.observerCallback = this.observerCallback.bind(this);
   }
 
   init() {
-    
-    if(this.elementoASerObservado && this.classeASerObservada && this.elementoParaAnimar){
+    if (this.elementoASerObservado && this.classeASerObservada && this.elementoParaAnimar) {
       this.addObserver();
-    }else if(this.elementoParaAnimar){
+    } else if (this.elementoParaAnimar) {
       this.animarNumero();
     }
 
@@ -23,11 +21,11 @@ export default class AnimaNumero {
 
   addObserver() {
     this.observer = new MutationObserver(this.observerCallback);
-    this.observer.observe(this.elementoASerObservado, {attributes: true});
+    this.observer.observe(this.elementoASerObservado, { attributes: true });
   }
 
   observerCallback() {
-    if(this.elementoASerObservado.classList.contains(this.classeASerObservada)){
+    if (this.elementoASerObservado.classList.contains(this.classeASerObservada)) {
       this.animarNumero();
       this.observer.disconnect();
     }
@@ -43,16 +41,18 @@ export default class AnimaNumero {
 
     this.elementoParaAnimar.innerText = 0;
 
-    for(let count = 0; count < iteracoes; count++){
-      setTimeout(() => {
-        soma += incremento;
+    const incrementaSoma = () => {
+      soma += incremento;
 
-        if(soma > total){
-          this.elementoParaAnimar.innerText = total;
-        }else{
-          this.elementoParaAnimar.innerText = soma;
-        }
-      }, count * passo);
+      if (soma > total) {
+        this.elementoParaAnimar.innerText = total;
+      } else {
+        this.elementoParaAnimar.innerText = soma;
+      }
+    };
+
+    for (let count = 0; count < iteracoes; count += 1) {
+      setTimeout(incrementaSoma, count * passo);
     }
   }
 }

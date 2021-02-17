@@ -1,11 +1,12 @@
 import debounce from './debouce.js';
+
 export default class Tooltip {
   constructor(seletorTooltips, classeTootip) {
     this.tooltips = document.querySelectorAll(seletorTooltips);
 
-    if(classeTootip !== undefined){
+    if (classeTootip !== undefined) {
       this.classeTootip = classeTootip;
-    }else{
+    } else {
       this.classeTootip = 'tooltip';
     }
 
@@ -15,7 +16,7 @@ export default class Tooltip {
   }
 
   init() {
-    if(this.tooltips.length){
+    if (this.tooltips.length) {
       this.addEventTooltip();
     }
 
@@ -25,9 +26,9 @@ export default class Tooltip {
   addEventTooltip() {
     this.tooltips.forEach((tooltip) => {
       tooltip.addEventListener('mouseover', this.onMouseOver);
-    })
+    });
   }
-  
+
   onMouseOver(event) {
     const target = event.currentTarget;
     const contentTooltip = target.getAttribute('aria-label');
@@ -41,7 +42,7 @@ export default class Tooltip {
     target.addEventListener('mousemove', this.onMouseMove);
     target.addEventListener('mouseleave', this.onMouseLeave);
   }
-  
+
   onMouseMove(event) {
     this.tooltipReposition(event);
   }
@@ -65,9 +66,9 @@ export default class Tooltip {
     const tooltipTop = top + positionOffsetY;
     let tooltipLeft;
 
-    if(left > halfWindowWidth){
+    if (left > halfWindowWidth) {
       tooltipLeft = left - positionOffsetX - 260;
-    }else {
+    } else {
       tooltipLeft = left + positionOffsetX;
     }
 

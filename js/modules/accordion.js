@@ -2,9 +2,9 @@ export default class Accordion {
   constructor(elementosAcionadores, classeAtiva) {
     this.elementosAcionadores = document.querySelectorAll(elementosAcionadores);
 
-    if(classeAtiva === undefined){
+    if (classeAtiva === undefined) {
       this.classeAtiva = 'ativo';
-    }else{
+    } else {
       this.classeAtiva = classeAtiva;
     }
 
@@ -14,7 +14,7 @@ export default class Accordion {
   }
 
   init() {
-    if(this.elementosAcionadores.length){
+    if (this.elementosAcionadores.length) {
       this.addEventAccordion();
     }
 
@@ -23,19 +23,19 @@ export default class Accordion {
 
   addEventAccordion() {
     this.elementosAcionadores.forEach((acionador) => {
-        acionador.addEventListener('click', this.acionadorHandler);
+      acionador.addEventListener('click', this.acionadorHandler);
     });
   }
 
-  acionadorHandler(event){
+  acionadorHandler(event) {
     event.preventDefault();
     const acionador = event.currentTarget;
     const href = acionador.getAttribute('href');
-      
-    if(href !== undefined){
+
+    if (href !== undefined) {
       const alvo = document.querySelector(href);
 
-      if(acionador && alvo){
+      if (acionador && alvo) {
         acionador.classList.toggle(this.classeAtiva);
         alvo.classList.toggle(this.classeAtiva);
         this.executeAllCallbacksAccordionToggle();
@@ -43,11 +43,11 @@ export default class Accordion {
     }
   }
 
-  addCallbackAccordionToggle(callback){
+  addCallbackAccordionToggle(callback) {
     this.callbackAccordionToggle.push(callback);
   }
 
-  executeAllCallbacksAccordionToggle(){
+  executeAllCallbacksAccordionToggle() {
     this.callbackAccordionToggle.forEach((callback) => {
       callback();
     });
