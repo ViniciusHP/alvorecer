@@ -68,6 +68,7 @@
 .tab-nav-texto {
   color: #816B5F;
   font-size: 1rem;
+  text-align: justify;
 }
 
 .js .locais-section .tab-nav-item {
