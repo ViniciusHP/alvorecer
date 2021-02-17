@@ -14,6 +14,10 @@
   margin-bottom: 5px;
 }
 
+.faq-section .bloco-pergunta {
+  text-align: justify;
+}
+
 .faq-section .pergunta::before{
   content: '';
   display: inline-block;

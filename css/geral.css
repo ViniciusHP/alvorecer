@@ -149,6 +149,7 @@ body {
   font-size: 1.125rem;
   max-width: 645px;
   margin: 10px 12.7px;
+  text-align: justify;
 }
 
 .opinioes-section .opiniao-item p{
