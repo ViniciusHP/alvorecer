@@ -1,12 +1,11 @@
 export default class AnimaTituloCampoFormulario {
   constructor(seletorTitulos, classeAtiva) {
-
     this.titulos = document.querySelectorAll(seletorTitulos);
     this.campos = [];
 
-    if(classeAtiva !== undefined){
+    if (classeAtiva !== undefined) {
       this.classeAtiva = classeAtiva;
-    }else{
+    } else {
       this.classeAtiva = 'ativo';
     }
 
@@ -16,7 +15,7 @@ export default class AnimaTituloCampoFormulario {
   }
 
   init() {
-    if(this.titulos.length){
+    if (this.titulos.length) {
       this.getCampos();
       this.addEventOnClick();
       this.addEventFieldOnFocusOut();
@@ -31,7 +30,7 @@ export default class AnimaTituloCampoFormulario {
       const campoId = t.getAttribute('for');
       const campo = document.querySelector('#'.concat(campoId));
 
-      if(campo){
+      if (campo) {
         this.campos.push(campo);
       }
     });
@@ -41,12 +40,12 @@ export default class AnimaTituloCampoFormulario {
     this.eventTypes.forEach((eventType) => {
       this.titulos.forEach((titulo) => {
         titulo.addEventListener(eventType, this.onLabelClick);
-      })
+      });
     });
   }
 
   addEventFieldOnFocusOut() {
-    this.campos.forEach((campo) => campo.addEventListener('focusout', this.onFieldFocusOut))
+    this.campos.forEach((campo) => campo.addEventListener('focusout', this.onFieldFocusOut));
   }
 
   onLabelClick(event) {
@@ -55,7 +54,7 @@ export default class AnimaTituloCampoFormulario {
     const campoId = titulo.getAttribute('for');
     const campo = document.querySelector('#'.concat(campoId));
 
-    if(campo){
+    if (campo) {
       campo.focus();
     }
   }
@@ -69,13 +68,13 @@ export default class AnimaTituloCampoFormulario {
   verificaSeAlgumCampoJaEstaPreenchido() {
     this.campos.forEach((campo) => {
       this.adicionaClasseAoCampoSePreenchido(campo);
-    })
+    });
   }
 
   adicionaClasseAoCampoSePreenchido(campo) {
-    if(campo.value.length > 0){
+    if (campo.value.length > 0) {
       campo.classList.add(this.classeAtiva);
-    }else{
+    } else {
       campo.classList.remove(this.classeAtiva);
     }
   }
