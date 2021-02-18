@@ -31,3 +31,10 @@
 .logo-svg:hover #sol {
   stroke: #D8AA75;
 }
+
+@media (max-width: 327px){
+  .logo-container,
+  .logo-container svg{
+    width: 170px;
+  }
+}
