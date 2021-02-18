@@ -1,0 +1,40 @@
+.logo-container {
+  width: 227px;
+}
+
+.logo-svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+.logo-svg .contorno{
+  stroke: #816B5F;
+  stroke-width: 2;
+  stroke-miterlimit: 22.9256;
+  transition: all .5s ease-in-out;
+}
+
+.logo-svg .preenchimento {
+  fill: #816B5F;
+  fill-rule: nonzero;
+  transition: all .5s ease-in-out;
+}
+
+.logo-svg:hover #texto ,
+.logo-svg:hover #sol {
+  fill: #D8AA75;
+}
+
+.logo-svg:hover #sol {
+  stroke: #D8AA75;
+}
+
+@media (max-width: 327px){
+  .logo-container,
+  .logo-container svg{
+    width: 170px;
+  }
+}
