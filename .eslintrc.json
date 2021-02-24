@@ -13,6 +13,9 @@
     "rules": {
         "import/extensions": ["error", "always"],
         "class-methods-use-this": "off",
-        "no-underscore-dangle": ["error", { "allowAfterThis": true }]
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+        "no-restricted-syntax": "off",
+        "no-await-in-loop": "off",
+        "no-param-reassign": "off"
     }
 }

@@ -1,0 +1,54 @@
+.container-flocos-de-neve {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.floco-neve {
+  animation: 
+    caida-flocos-de-neve 3s linear forwards,
+    movimento-flocos-de-neve 10s ease-in-out infinite;
+
+  color: #fff;
+  position: fixed;
+  top: -10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.floco-neve-na-espera {
+  position: fixed;
+  top: -20px;
+}
+
+@keyframes caida-flocos-de-neve {
+  0%{
+    top:-10%;
+  }
+  100%{
+    top:100%;
+  }
+}
+
+@keyframes movimento-flocos-de-neve {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%{
+    transform: translateX(80px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75%{
+    transform: translateX(-80px);
+  }
+}

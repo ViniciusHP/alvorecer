@@ -49,3 +49,37 @@ animaTitulosFormulario.init();
 document.querySelectorAll('a[href$=".html"]').forEach((a) => {
   a.addEventListener('click', (event) => event.preventDefault());
 });
+
+/* Adiciona a animação de flocos de neve se for o mês de Dezembro no Brasil */
+const dataHoje = new Date();
+// Corrigindo o horário para o horário do Brasil
+dataHoje.setUTCHours(dataHoje.getUTCHours() - 3);
+const mes = dataHoje.getUTCMonth() + 1;
+const isDezembro = mes === 12;
+
+function carregaEstiloCssNeve() {
+  const href = '../css/neve.css';
+  const elementoLink = document.createElement('link');
+  elementoLink.setAttribute('rel', 'stylesheet');
+  elementoLink.setAttribute('type', 'text/css');
+  elementoLink.setAttribute('href', href);
+  document.head.appendChild(elementoLink);
+}
+
+async function carregarNeve() {
+  const { default: Neve } = await import('./modules/Neve.js');
+
+  const arrayUrlsTiposDeFlocosDeNeve = ['../img/flocos-de-neve/floco-neve-1.png',
+    '../img/flocos-de-neve/floco-neve-2.png',
+    '../img/flocos-de-neve/floco-neve-3.png',
+    '../img/flocos-de-neve/floco-neve-4.png'];
+
+  const neve = new Neve('container-flocos-de-neve', 'floco-neve',
+    'floco-neve-na-espera', 30, 300, arrayUrlsTiposDeFlocosDeNeve);
+  neve.init().iniciarNevasca();
+}
+
+if (isDezembro) {
+  carregaEstiloCssNeve();
+  carregarNeve();
+}
