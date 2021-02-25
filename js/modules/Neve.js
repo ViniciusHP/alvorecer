@@ -60,7 +60,7 @@ export default class Neve {
   }
 
   criaFlocoDeNeve() {
-    const flocoDeNeve = document.createElement('img');
+    const flocoDeNeve = document.createElement('i');
     this.adicionarClasseDeEsperaAoFlocoDeNeve(flocoDeNeve);
     return flocoDeNeve;
   }
@@ -74,8 +74,8 @@ export default class Neve {
     flocoDeNeve.style.opacity = Math.random();
     flocoDeNeve.style.left = `${Math.random() * (window.innerWidth - 20)}px`;
 
-    flocoDeNeve.src = this.blobFlocosDeNeve[Math.floor(Math.random()
-      * this.blobFlocosDeNeve.length)];
+    flocoDeNeve.style.content = `url(${this.blobFlocosDeNeve[Math.floor(Math.random()
+      * this.blobFlocosDeNeve.length)]})`;
 
     const width = `${Math.random() * 10 + 10}px`;
     flocoDeNeve.style.width = width;
