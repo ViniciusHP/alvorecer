@@ -84,26 +84,40 @@ export default class Neve {
     return flocoDeNeve;
   }
 
-  async fazerFetchParaObterImagensDosFlocos() {
+  fazerFetchParaObterImagensDosFlocos() {
+    this.arrayPromisesObtencaoDasImagensDosFlocos = [];
+
     for (const url of this.arrayUrlsTiposDeFlocosDeNeve) {
-      const response = await fetch(url);
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      this.blobFlocosDeNeve.push(blobUrl);
+      const promise = fetch(url)
+        .then((response) => response.blob())
+        .then((blob) => URL.createObjectURL(blob))
+        .then((blobUrl) => this.blobFlocosDeNeve.push(blobUrl));
+      this.arrayPromisesObtencaoDasImagensDosFlocos.push(promise);
     }
   }
 
-  async iniciarNevasca() {
+  iniciarNevasca() {
     /* Se os flocos de neve não estão carregados,
     realiza as requisições antes de iniciar a animação */
     if (this.blobFlocosDeNeve.length !== this.arrayUrlsTiposDeFlocosDeNeve.length) {
-      await this.fazerFetchParaObterImagensDosFlocos();
-      this.infoFlocos.forEach((info) => {
-        info.flocoDeNeve = this.alterarParametrosFlocoDeNeve(info.flocoDeNeve);
-      });
+      this.fazerFetchParaObterImagensDosFlocos();
+      Promise.all(this.arrayPromisesObtencaoDasImagensDosFlocos)
+        .then(() => this.iniciarTodosParametrosDeTodosFlocos())
+        .then(() => this.iniciarIntervalo());
+    } else {
+      this.iniciarIntervalo();
     }
+  }
 
+  iniciarTodosParametrosDeTodosFlocos() {
+    this.infoFlocos.forEach((info) => {
+      info.flocoDeNeve = this.alterarParametrosFlocoDeNeve(info.flocoDeNeve);
+    });
+  }
+
+  iniciarIntervalo() {
     this.posicaoDoCursorNoArray = 0;
+
     this.intervaloNevasca = setInterval(() => {
       const infoFlocoAtual = this.infoFlocos[this.posicaoDoCursorNoArray];
 
