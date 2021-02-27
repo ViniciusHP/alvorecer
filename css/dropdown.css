@@ -7,8 +7,7 @@
   width: 130px;
 }
 
-.dropdown-menu.ativo,
-.nav-menu li:hover .dropdown-menu{
+.dropdown-menu.ativo {
   display: block;
   animation: animacao-menu-dropdown .5s ease-in-out forwards;
 }
@@ -42,5 +41,12 @@
     opacity: 1;
     visibility: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (min-width: 1032px) {
+  .nav-menu li:hover .dropdown-menu{
+    display: block;
+    animation: animacao-menu-dropdown .5s ease-in-out forwards;
   }
 }
