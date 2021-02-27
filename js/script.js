@@ -73,10 +73,10 @@ function carregaEstiloCssNeve() {
 async function carregarNeve() {
   const { default: Neve } = await import('./modules/Neve.js');
 
-  const arrayUrlsTiposDeFlocosDeNeve = ['../img/flocos-de-neve/floco-neve-1.png',
-    '../img/flocos-de-neve/floco-neve-2.png',
-    '../img/flocos-de-neve/floco-neve-3.png',
-    '../img/flocos-de-neve/floco-neve-4.png'];
+  const arrayUrlsTiposDeFlocosDeNeve = ['./img/flocos-de-neve/floco-neve-1.png',
+    './img/flocos-de-neve/floco-neve-2.png',
+    './img/flocos-de-neve/floco-neve-3.png',
+    './img/flocos-de-neve/floco-neve-4.png'];
 
   const neve = new Neve('container-flocos-de-neve', 'floco-neve',
     'floco-neve-na-espera', 30, 300, arrayUrlsTiposDeFlocosDeNeve);
