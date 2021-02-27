@@ -29,7 +29,7 @@ tabNav.addCallbackTabNavChange(() => {
   acionadorDeClasseAoDeslocamentoScroll.recarregaDadosDePosicionamento();
 });
 
-fetchNumeroVisitantes('../numero-visitantes.json', '[data-numero-visitantes]');
+fetchNumeroVisitantes('./numero-visitantes.json', '[data-numero-visitantes]');
 
 const accordion = new Accordion('[data-accordion-item]');
 accordion.init();
