@@ -8,6 +8,7 @@ import Accordion from './modules/accordion.js';
 import Tooltip from './modules/tooltip.js';
 import Modal from './modules/modal.js';
 import AnimaTituloCampoFormulario from './modules/anima-titulo-campos-formulario.js';
+import Dropdown from './modules/dropdown.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -44,6 +45,9 @@ modal.init();
 
 const animaTitulosFormulario = new AnimaTituloCampoFormulario('[data-anime="titulo-formulario"]', 'preenchido');
 animaTitulosFormulario.init();
+
+const dropdown = new Dropdown('[data-dropdown]', 'ativo');
+dropdown.init();
 
 /* Removendo o redirecionamento para páginas que ainda não existem */
 document.querySelectorAll('a[href$=".html"]').forEach((a) => {
