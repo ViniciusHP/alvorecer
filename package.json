@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "server": "lite-server -c bs-config.json"
+    "server": "lite-server -c bs-config.json",
+    "start": "concurrently \"npm:dev\" \"npm:server\""
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
     "@babel/preset-env": "^7.12.16",
+    "concurrently": "^6.1.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
