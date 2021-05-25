@@ -88,3 +88,10 @@
     margin-left: 0;
   }
 }
+
+@media (max-height: 453px) {
+  .menu-mobile-container{
+    max-height: calc(100vh - 68px);
+    overflow-y: scroll;
+  }
+}
