@@ -69,3 +69,26 @@
   margin: 33px 0;
   font-size: 1rem;
 }
+
+@media screen and (max-height: 504px){
+  .form-group{
+    margin-bottom: 10px;
+  }
+  .form-group-checkbox {
+    margin: 22px 0;
+  }
+  .submit-btn-container input[type="submit"]{
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    width: 120px;
+  }
+  .form-group label {
+    font-size: 1.5rem;
+    top: 1.73rem;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="password"] {
+    margin-top: 1.5rem;
+    font-size: 1.35rem;
+  }
+}
