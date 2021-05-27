@@ -15,6 +15,7 @@ a {
   text-decoration: none;
   display: inline-block;
   color: #816B5F;
+  outline: none;
 }
 
 img {
