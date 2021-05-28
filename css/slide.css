@@ -15,6 +15,7 @@
 .slide-item {
   flex-shrink: 0;
   width: 100vw;
+  min-height: 215px;
   max-height: 600px;
   position: relative;
   overflow: hidden;
@@ -78,5 +79,12 @@
 
   .controls-wrapper{
     bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 469px){
+  .slide-item img {
+    height: 100%;
+    object-fit: cover;
   }
 }
