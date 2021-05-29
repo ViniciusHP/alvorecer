@@ -7,6 +7,7 @@
     color: #816B5F;
     border-top: 4px solid;
     cursor: pointer;
+    transform: translateY(5px);
   }
 
   .mobile-btn::after, .mobile-btn::before {
@@ -22,6 +23,7 @@
 
   .mobile-btn.ativo {
     border-top-color: transparent;
+    transform: translateY(-5px);
   }
 
   .mobile-btn.ativo::before {
