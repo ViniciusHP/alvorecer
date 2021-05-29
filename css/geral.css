@@ -255,6 +255,13 @@ body {
   width: 55px;
   height: 55px;
   padding: 0 11px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.redes-sociais a:hover{
+  transform: scale(1.1);
+  -webkit-filter: invert(70%) sepia(65%) saturate(268%) hue-rotate(350deg) brightness(91%) contrast(84%);
+  filter: invert(70%) sepia(65%) saturate(268%) hue-rotate(350deg) brightness(91%) contrast(84%);
 }
 
 .footer .copy {
