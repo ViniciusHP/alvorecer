@@ -13,7 +13,7 @@
     "url": "git+https://github.com/ViniciusHP/alvorecer.git"
   },
   "author": "ViniciusHP",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.12.16",
