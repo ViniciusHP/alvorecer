@@ -38,12 +38,14 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
    */
   init() {
     if (this.elementosAcionadores.length && this.elementosAlvo.length) {
-      // Espera que todos componentes sejam carregados para depois calcular as distâncias
-      setTimeout(() => {
-        this.carregaDadosDePosicionamento();
-        this.addEventAoScroll();
-        this.acionaAlvoHandler();
-      }, 200);
+      // Espera que todos componentes sejam carregados para depois calcular as distâncias das seções
+      document.body.onload = () => {
+        setTimeout(() => {
+          this.carregaDadosDePosicionamento();
+          this.addEventAoScroll();
+          this.acionaAlvoHandler();
+        }, 200);
+      };
     }
 
     return this;
