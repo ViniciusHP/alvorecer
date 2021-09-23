@@ -1,3 +1,6 @@
+/**
+ * Classe que faz Nevar!
+ */
 export default class Neve {
   constructor(classeContainerNeve, classeFlocoDeNeve, classeFlocoDeNeveNaEspera,
     numeroDeFlocosDeNeve, tempoEntreFlocos, arrayUrlsTiposDeFlocosDeNeve) {
@@ -23,6 +26,10 @@ export default class Neve {
     this.blobFlocosDeNeve = [];
   }
 
+  /**
+   * Inicializa as funcionalidades.
+   * @returns Instância atual.
+   */
   init() {
     if (this.classeContainerNeve && this.classeFlocoDeNeve) {
       this.selecionarContainerNeve();
@@ -32,6 +39,9 @@ export default class Neve {
     return this;
   }
 
+  /**
+   * Seleciona o elemento que servirá de container para os flocos de neve.
+   */
   selecionarContainerNeve() {
     this.containerNeve = document.querySelector(this.classeContainerNeve);
 
@@ -42,6 +52,9 @@ export default class Neve {
     }
   }
 
+  /**
+   * Cria um array com todos os flocos de neve.
+   */
   criarTodosFlocosDeNeve() {
     const listaFlocosDeNeve = [];
 
@@ -59,12 +72,21 @@ export default class Neve {
     });
   }
 
+  /**
+   * Cria cada floco de maneira unitária.
+   * @returns Elemento <i>
+   */
   criaFlocoDeNeve() {
     const flocoDeNeve = document.createElement('i');
     this.adicionarClasseDeEsperaAoFlocoDeNeve(flocoDeNeve);
     return flocoDeNeve;
   }
 
+  /**
+   * Altera os estilos do floco de neve de maneira aleatória.
+   * @param {*} flocoDeNeve Floco que receberá novos estilos.
+   * @returns Flocos com os estilos alterados.
+   */
   alterarParametrosFlocoDeNeve(flocoDeNeve) {
     const duracaoDaAnimacaoCaidaDoFlocoDeNeve = Math.floor(Math.random() * 3) + 5;
     const duracaoDoAnimacaoDeMovimentoDoFlocoDeNeve = Math.random() * 5 + 5;
@@ -84,6 +106,9 @@ export default class Neve {
     return flocoDeNeve;
   }
 
+  /**
+   * Realizar requisições assíncronas para obter as imagens dos flocos
+   */
   fazerFetchParaObterImagensDosFlocos() {
     this.arrayPromisesObtencaoDasImagensDosFlocos = [];
 
@@ -96,6 +121,9 @@ export default class Neve {
     }
   }
 
+  /**
+   * Inicia a animação da neve.
+   */
   iniciarNevasca() {
     /* Se os flocos de neve não estão carregados,
     realiza as requisições antes de iniciar a animação */
@@ -109,12 +137,18 @@ export default class Neve {
     }
   }
 
+  /**
+   * Inicializa os estilos de todos os flocos criados.
+   */
   iniciarTodosParametrosDeTodosFlocos() {
     this.infoFlocos.forEach((info) => {
       info.flocoDeNeve = this.alterarParametrosFlocoDeNeve(info.flocoDeNeve);
     });
   }
 
+  /**
+   * Inicializa o timer da neve.
+   */
   iniciarIntervalo() {
     this.posicaoDoCursorNoArray = 0;
 
@@ -127,6 +161,9 @@ export default class Neve {
     }, this.tempoEntreFlocos);
   }
 
+  /**
+   * Para a animação da neve.
+   */
   pararNevasca() {
     if (this.intervaloNevasca) {
       clearInterval(this.intervaloNevasca);
@@ -134,6 +171,10 @@ export default class Neve {
     }
   }
 
+  /**
+   * Anima cada floco separadamente.
+   * @param {*} infoFlocoAtual Informações do floco atual.
+   */
   animarFlocoAtual(infoFlocoAtual) {
     const floco = infoFlocoAtual.flocoDeNeve;
     this.adicionarClasseDeFlocoDeNeve(floco);
@@ -163,18 +204,34 @@ export default class Neve {
     }
   }
 
+  /**
+   * Adiciona classe de floco de neve no elemento.
+   * @param {*} elemento Elemento que receberá o estilo.
+   */
   adicionarClasseDeFlocoDeNeve(elemento) {
     elemento.classList.add(this.classeFlocoDeNeve);
   }
 
+  /**
+   * Remove classe de floco de neve no elemento.
+   * @param {*} elemento Elemento que terá o estilo removido.
+   */
   removerClasseDeFlocoDeNeve(elemento) {
     elemento.classList.remove(this.classeFlocoDeNeve);
   }
 
+  /**
+   * Adiciona classe que faz o floco de neve volte para cima.
+   * @param {*} elemento Elemento que representa o floco de neve.
+   */
   adicionarClasseDeEsperaAoFlocoDeNeve(elemento) {
     elemento.classList.add(this.classeFlocoDeNeveNaEspera);
   }
 
+  /**
+   * Remove classe de espera do floco de neve.
+   * @param {*} elemento Elemento que representa o floco de neve.
+   */
   removerClasseDeEsperaDoFlocoDeNeve(elemento) {
     elemento.classList.remove(this.classeFlocoDeNeveNaEspera);
   }
