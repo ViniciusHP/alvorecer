@@ -1,14 +1,14 @@
-import MenuMobile from './modules/menu-mobile.js';
-import DeslocamentoAteOAlvo from './modules/anima-deslocamento-ate-alvo.js';
-import AcionadorDeClasseAoDeslocamentoScroll from './modules/acionador-classe-deslocamento-scroll.js';
-import Slide from './modules/slide.js';
-import TabNav from './modules/tab-nav.js';
+import MenuMobile from './modules/MenuMobile.js';
+import DeslocamentoAteOAlvo from './modules/DeslocamentoAteOAlvo.js';
+import AcionadorDeClasseAoDeslocamentoScroll from './modules/AcionadorDeClasseAoDeslocamentoScroll.js';
+import Slide from './modules/Slide.js';
+import TabNav from './modules/TabNav.js';
 import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
-import Accordion from './modules/accordion.js';
-import Tooltip from './modules/tooltip.js';
-import Modal from './modules/modal.js';
-import AnimaTituloCampoFormulario from './modules/anima-titulo-campos-formulario.js';
-import Dropdown from './modules/dropdown.js';
+import Accordion from './modules/Accordion.js';
+import Tooltip from './modules/Tooltip.js';
+import Modal from './modules/Modal.js';
+import AnimaTituloCampoFormulario from './modules/AnimaTituloCampoFormulario.js';
+import Dropdown from './modules/Dropdown.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();

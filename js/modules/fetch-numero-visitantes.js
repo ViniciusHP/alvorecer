@@ -1,4 +1,4 @@
-import AnimaNumero from './anima-numeros.js';
+import AnimaNumero from './AnimaNumero.js';
 
 /**
  * Função que executa requisição ajax para obter valor de numérico de 'número de visitantes'
