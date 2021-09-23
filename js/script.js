@@ -54,11 +54,9 @@ document.querySelectorAll('a[href$=".html"]').forEach((a) => {
   a.addEventListener('click', (event) => event.preventDefault());
 });
 
-/* Adiciona a animação de flocos de neve se for o mês de Dezembro no Brasil */
+/* Adiciona a animação de flocos de neve se for o mês de Dezembro */
 const dataHoje = new Date();
-// Corrigindo o horário para o horário do Brasil
-dataHoje.setUTCHours(dataHoje.getUTCHours() - 3);
-const mes = dataHoje.getUTCMonth() + 1;
+const mes = dataHoje.getMonth() + 1;
 const isDezembro = mes === 12;
 
 function carregaEstiloCssNeve() {
