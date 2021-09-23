@@ -1,3 +1,6 @@
+/**
+ * Classe que controla o slide.
+ */
 export default class Slide {
   constructor(seletorSlide, seletorSlideItens, seletorControlesContainer,
     seletorBotoesControles, tempoEntreSlides, classeAtivaControles) {
@@ -23,6 +26,10 @@ export default class Slide {
     this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this);
   }
 
+  /**
+   * Inicializa as funcionalidades.
+   * @returns Instância atual.
+   */
   init() {
     if (this.slide && this.slideItens.length) {
       this.carregaDadosPosicionamentoTodosItens();
@@ -35,6 +42,11 @@ export default class Slide {
     return this;
   }
 
+  /**
+   * Atualiza os dados do índice do slide, como o próximo indice,
+   * o índice anterior e o novo índice atual.
+   * @param {*} indiceAtual Índice atual do slide.
+   */
   carregaDadosPosicionamentoAtual(indiceAtual) {
     const indiceFinal = this.dadosPosicionamentoTodosItensSlide.length - 1;
 
@@ -61,6 +73,9 @@ export default class Slide {
     };
   }
 
+  /**
+   * Carrega as posições dos itens do slide.
+   */
   carregaDadosPosicionamentoTodosItens() {
     this.dadosPosicionamentoTodosItensSlide = [];
 
@@ -75,6 +90,10 @@ export default class Slide {
     });
   }
 
+  /**
+   * Adiciona classe nos botões de controle, indicando qual o slide atual.
+   * @param {*} indice Índice do slide atual.
+   */
   indicaSlideAtualNosControles(indice) {
     this.controlesBotoes.forEach((elemento, indiceBotao) => {
       if (indice === indiceBotao) {
@@ -85,20 +104,33 @@ export default class Slide {
     });
   }
 
+  /**
+   * Exibe determinado item do slide a partir de seu índice.
+   * @param {*} indice Índice do item do slide.
+   */
   exibeSlide(indice) {
     this.slide.style.transform = `translate3d(${this.dadosPosicionamentoTodosItensSlide[indice].distancia}, 0, 0)`;
     this.carregaDadosPosicionamentoAtual(indice);
     this.indicaSlideAtualNosControles(indice);
   }
 
+  /**
+   * Move o slide para o item anterior.
+   */
   slidePosterior() {
     this.exibeSlide(this.dadosPosicaoAtual.slidePosterior);
   }
 
+  /**
+   * Move o slide para o próximo item.
+   */
   slideAnterior() {
     this.exibeSlide(this.dadosPosicaoAtual.slideAnterior);
   }
 
+  /**
+   * Inicializa timer para movimentar o slide.
+   */
   criarTimer() {
     this.timer = setInterval(() => {
       this.slidePosterior();
@@ -107,12 +139,19 @@ export default class Slide {
     this.isTimerLimpo = false;
   }
 
+  /**
+   * Finaliza o timer que movimenta o slide.
+   */
   limparTimer() {
     clearInterval(this.timer);
 
     this.isTimerLimpo = true;
   }
 
+  /**
+   * Adiciona tratamento de evento de clique nos botões de controle
+   * do slide.
+   */
   addEventControles() {
     if (this.controlesBotoes.length) {
       this.controlesBotoes.forEach((elemento, indice) => {
@@ -127,6 +166,9 @@ export default class Slide {
     }
   }
 
+  /**
+   * Adiciona tratamento de evento quando o mouse estiver no slide.
+   */
   addEventOnMouseOver() {
     this.slide.addEventListener('mouseover', this.onMouseOverHandler);
   }
@@ -139,6 +181,9 @@ export default class Slide {
     return this._isTimerLimpo;
   }
 
+  /**
+   * Se o mouse estiver em cima do slide, a animação dele é parada.
+   */
   onMouseOverHandler({ target }) {
     if (this.slide.contains(target) && !this.isTimerLimpo) {
       this.limparTimer();
@@ -146,6 +191,9 @@ export default class Slide {
     }
   }
 
+  /**
+   * Se o mouse não estiver em cima do slide, a animação dele é iniciada.
+   */
   onMouseLeaveHandler() {
     this.criarTimer();
     this.slide.removeEventListener('mouseleave', this.onMouseLeaveHandler);
