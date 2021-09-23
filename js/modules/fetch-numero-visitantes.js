@@ -1,5 +1,10 @@
-import AnimaNumero from './anima-numeros.js';
+import AnimaNumero from './AnimaNumero.js';
 
+/**
+ * Função que executa requisição ajax para obter valor de numérico de 'número de visitantes'
+ * @param {*} url Url onde está arquivo JSON o número de visitantes
+ * @param {*} elementoAlvo Elemento que receberá o valor obtido
+ */
 export default async function fetchNumeroVisitantes(url, elementoAlvo) {
   const elemento = document.querySelector(elementoAlvo);
   const response = await fetch(url);
@@ -13,6 +18,7 @@ export default async function fetchNumeroVisitantes(url, elementoAlvo) {
     }
   }
 
+  /* A animação dos números só estará disponível após a requisição */
   const animaNumeroVisitantes = new AnimaNumero('#opinioes-section', 'ativo', '[data-anima-numeros]', 2000);
   animaNumeroVisitantes.init();
 }

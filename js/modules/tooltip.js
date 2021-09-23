@@ -1,5 +1,8 @@
 import debounce from './debouce.js';
 
+/**
+ * Classe que controla o tooltip.
+ */
 export default class Tooltip {
   constructor(seletorTooltips, classeTootip) {
     this.tooltips = document.querySelectorAll(seletorTooltips);
@@ -15,6 +18,10 @@ export default class Tooltip {
     this.onMouseLeave = this.onMouseLeave.bind(this);
   }
 
+  /**
+   * Inicializa as funcionalidades.
+   * @returns Instância atual.
+   */
   init() {
     if (this.tooltips.length) {
       this.addEventTooltip();
@@ -23,12 +30,19 @@ export default class Tooltip {
     return this;
   }
 
+  /**
+   * Adiciona tratamento de evento mouseover nos elementos com tooltip
+   */
   addEventTooltip() {
     this.tooltips.forEach((tooltip) => {
       tooltip.addEventListener('mouseover', this.onMouseOver);
     });
   }
 
+  /**
+   * Trata o evento mouseover, exibindo o tooltip.
+   * @param {*} event Evento
+   */
   onMouseOver(event) {
     const target = event.currentTarget;
     const contentTooltip = target.getAttribute('aria-label');
@@ -43,10 +57,18 @@ export default class Tooltip {
     target.addEventListener('mouseleave', this.onMouseLeave);
   }
 
+  /**
+   * Trata o evento de mousemove, reposicionando o tooltip.
+   * @param {*} event Evento
+   */
   onMouseMove(event) {
     this.tooltipReposition(event);
   }
 
+  /**
+   * Trata o evento de mouseleave, removendo o tooltip
+   * @param {*} event Evento
+   */
   onMouseLeave(event) {
     const target = event.currentTarget;
     this.elementTooltip.remove();
@@ -54,6 +76,10 @@ export default class Tooltip {
     target.removeEventListener('mouseleave', this.onMouseLeave);
   }
 
+  /**
+   * Reposiciona o tooltip de acordo com o mouse.
+   * @param {*} event Evento de mouse.
+   */
   tooltipReposition(event) {
     const top = event.pageY;
     const left = event.pageX;

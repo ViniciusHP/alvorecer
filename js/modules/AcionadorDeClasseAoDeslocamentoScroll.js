@@ -1,6 +1,17 @@
 import debounce from './debouce.js';
 
+/**
+ * Classe responsável por adicionar classe CSS a partir do scroll.
+ * Quando o scroll estiver em um elemento acionador, será adicionada uma
+ * classe CSS tanto no elemento acionador quanto no elemento alvo.
+ */
 export default class AcionadorDeClasseAoDeslocamentoScroll {
+  /**
+   * @param {*} elementosAcionadores Seletor CSS dos elementos acionadores.
+   * @param {*} elementosAlvo Seletor CSS dos elementos alvo.
+   * @param {*} activeClass Classe que será adicionada ao elemento alvo.
+   * @param {*} showClass Classe que será adicionada ao elemento acionador.
+   */
   constructor(elementosAcionadores, elementosAlvo, activeClass, showClass) {
     this.elementosAcionadores = document.querySelectorAll(elementosAcionadores);
     this.elementosAlvo = document.querySelectorAll(elementosAlvo);
@@ -21,6 +32,10 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     this.recarregaDadosDePosicionamento = this.recarregaDadosDePosicionamento.bind(this);
   }
 
+  /**
+   * Inicializa as funcionalidades
+   * @returns Instância atual.
+   */
   init() {
     if (this.elementosAcionadores.length && this.elementosAlvo.length) {
       // Espera que todos componentes sejam carregados para depois calcular as distâncias das seções
@@ -36,6 +51,10 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     return this;
   }
 
+  /**
+   * Método responsável por extrair as posições de inicio e fim dos elementos
+   * acionadores, assim como obter o elemento alvo correspondente ao acionador.
+   */
   carregaDadosDePosicionamento() {
     this.dadosDePosicionamentoERelacionamento = [];
 
@@ -68,6 +87,11 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     });
   }
 
+  /**
+   * Obtém um elemento alvo a partir do nome.
+   * @param {*} nome Nome do alvo que está no dataset.
+   * @returns Elemento alvo.
+   */
   obtemElementoAlvoCorrespondenteAoNome(nome) {
     let alvo;
 
@@ -80,11 +104,21 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     return alvo;
   }
 
+  /**
+   * Adiciona tanto evento que lida com o scroll, quando evento de
+   * resize da tela, para que os dados de posicionamento sejam recarregados.
+   */
   addEventAoScroll() {
     window.addEventListener('scroll', this.acionaAlvoHandler);
     window.addEventListener('resize', this.recarregaDadosDePosicionamento);
   }
 
+  /**
+   * Método responsável por tratar o evento de scroll.
+   * Se o scroll estiver dentro da área de algum elemento acionador,
+   * será adicionada uma classe CSS tanto no elemento acionador (para exibir o conteúdo)
+   * quanto no elemento alvo (indicação na barra de menu qual a seção atual).
+   */
   acionaAlvoHandler() {
     const currentPageYOffset = Math.floor(window.pageYOffset);
     this.dadosDePosicionamentoERelacionamento.forEach((dados) => {
@@ -101,6 +135,9 @@ export default class AcionadorDeClasseAoDeslocamentoScroll {
     });
   }
 
+  /**
+   * Realiza a atualização dos dados de posicionamento.
+   */
   recarregaDadosDePosicionamento() {
     setTimeout(() => {
       this.carregaDadosDePosicionamento();

@@ -1,3 +1,6 @@
+/**
+ * Classe que controla o modal.
+ */
 export default class Modal {
   constructor(seletorAbrirModal, seletorFecharModal, classeAtiva) {
     this.buttonModal = document.querySelector(seletorAbrirModal);
@@ -16,6 +19,10 @@ export default class Modal {
     this.closeModal = this.closeModal.bind(this);
   }
 
+  /**
+   * Inicializa as funcionalidades.
+   * @returns Instância atual.
+   */
   init() {
     if (this.buttonModal && this.modalContainer && this.buttonCloseModal) {
       this.addEventOpenModal();
@@ -24,12 +31,18 @@ export default class Modal {
     return this;
   }
 
+  /**
+   * Adiciona os tratadores de eventos de exibição do modal
+   */
   addEventOpenModal() {
     this.eventTypes.forEach((eventType) => {
       this.buttonModal.addEventListener(eventType, this.openModal);
     });
   }
 
+  /**
+   * Adiciona os tratadores de eventos de ocultamento do modal
+   */
   addEventCloseModal() {
     this.eventTypes.forEach((eventType) => {
       this.buttonCloseModal.addEventListener(eventType, this.closeModal);
@@ -37,6 +50,9 @@ export default class Modal {
     });
   }
 
+  /**
+   * Remove os tratadores de eventos de ocultamento do modal
+   */
   removeEventCloseModal() {
     this.eventTypes.forEach((eventType) => {
       this.buttonCloseModal.removeEventListener(eventType, this.closeModal);
@@ -44,12 +60,18 @@ export default class Modal {
     });
   }
 
+  /**
+   * Exibe o modal
+   */
   openModal(event) {
     event.preventDefault();
     this.modalContainer.classList.add(this.classeAtiva);
     this.addEventCloseModal();
   }
 
+  /**
+   * Oculta o modal
+   */
   closeModal({ target }) {
     if (target === this.buttonCloseModal || target === this.modalContainer) {
       this.modalContainer.classList.remove(this.classeAtiva);

@@ -1,14 +1,14 @@
-import MenuMobile from './modules/menu-mobile.js';
-import DeslocamentoAteOAlvo from './modules/anima-deslocamento-ate-alvo.js';
-import AcionadorDeClasseAoDeslocamentoScroll from './modules/acionador-classe-deslocamento-scroll.js';
-import Slide from './modules/slide.js';
-import TabNav from './modules/tab-nav.js';
+import MenuMobile from './modules/MenuMobile.js';
+import DeslocamentoAteOAlvo from './modules/DeslocamentoAteOAlvo.js';
+import AcionadorDeClasseAoDeslocamentoScroll from './modules/AcionadorDeClasseAoDeslocamentoScroll.js';
+import Slide from './modules/Slide.js';
+import TabNav from './modules/TabNav.js';
 import fetchNumeroVisitantes from './modules/fetch-numero-visitantes.js';
-import Accordion from './modules/accordion.js';
-import Tooltip from './modules/tooltip.js';
-import Modal from './modules/modal.js';
-import AnimaTituloCampoFormulario from './modules/anima-titulo-campos-formulario.js';
-import Dropdown from './modules/dropdown.js';
+import Accordion from './modules/Accordion.js';
+import Tooltip from './modules/Tooltip.js';
+import Modal from './modules/Modal.js';
+import AnimaTituloCampoFormulario from './modules/AnimaTituloCampoFormulario.js';
+import Dropdown from './modules/Dropdown.js';
 
 const menuMobile = new MenuMobile('[data-menu-mobile-btn]', '[data-menu-mobile]');
 menuMobile.init();
@@ -54,11 +54,9 @@ document.querySelectorAll('a[href$=".html"]').forEach((a) => {
   a.addEventListener('click', (event) => event.preventDefault());
 });
 
-/* Adiciona a animação de flocos de neve se for o mês de Dezembro no Brasil */
+/* Adiciona a animação de flocos de neve se for o mês de Dezembro */
 const dataHoje = new Date();
-// Corrigindo o horário para o horário do Brasil
-dataHoje.setUTCHours(dataHoje.getUTCHours() - 3);
-const mes = dataHoje.getUTCMonth() + 1;
+const mes = dataHoje.getMonth() + 1;
 const isDezembro = mes === 12;
 
 function carregaEstiloCssNeve() {
