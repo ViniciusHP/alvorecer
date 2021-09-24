@@ -225,6 +225,12 @@ body {
   margin: 8px 13px;
 }
 
+.contato-section .lista-dados-contatos li p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .contato-section .lista-dados-contatos li p::before {
   content: '';
   display: inline-block;
