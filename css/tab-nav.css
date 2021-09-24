@@ -46,6 +46,10 @@
   margin: 0 8.25px;
 }
 
+.tab-nav-card-imagem img {
+  border-radius: 11px;
+}
+
 .tab-nav-titulo {
   font-style: italic;
   font-size: 1.5rem;
