@@ -1,3 +1,10 @@
+:root {
+  --marrom: #816B5F;
+  --cinza: #EBE5E2;
+  --areia: #F0E5CF;
+  --laranja: #D8AA75;
+}
+
 * {
   font-family: 'Open Sans', sans-serif;
 }
