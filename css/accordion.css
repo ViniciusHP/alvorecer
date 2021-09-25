@@ -9,7 +9,7 @@
 
 .faq-section .pergunta {
   font-size: 1.125rem;
-  color: #D8AA75;
+  color: var(--laranja);
   font-weight: bold;
   margin-bottom: 5px;
 }

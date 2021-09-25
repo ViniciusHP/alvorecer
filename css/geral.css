@@ -1,6 +1,7 @@
 :root {
   --marrom: #816B5F;
   --cinza: #EBE5E2;
+  --cinza-2: #E8E0DC;
   --areia: #F0E5CF;
   --laranja: #D8AA75;
 }
@@ -21,7 +22,7 @@ ul, ol {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #816B5F;
+  color: var(--marrom);
   outline: none;
 }
 
@@ -31,8 +32,8 @@ img {
 }
 
 body {
-  background: #EBE5E2;
-  color: #816B5F;
+  background: var(--cinza);
+  color: var(--marrom);
 }
 
 .aproveite-section,
@@ -86,7 +87,7 @@ body {
 .card {
   max-width: 259px;
   border-radius: 11px;
-  background: #F0E5CF;
+  background: var(--areia);
   padding: 15px 20px 34px 20px;
   margin: 20px 15px 20px 15px;
   text-align: center;
@@ -113,7 +114,7 @@ body {
   display: block;
   width: 168px;
   height: 2px;
-  background: #D8AA75;
+  background: var(--laranja);
   margin: 5px auto 0 auto;
 }
 
@@ -123,7 +124,7 @@ body {
 
 /* Locais Section */
 .locais-section {
-  background: #E8E0DC;
+  background: var(--cinza-2);
 }
 
 /* Opiniões Section */
@@ -144,7 +145,7 @@ body {
   width: 155px;
   height: 155px;
   border-radius: 50%;
-  background: #816B5F;
+  background: var(--marrom);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,13 +163,13 @@ body {
 
 .opinioes-section .opiniao-item p{
   padding-bottom: 2px;
-  border-bottom: 2px solid #D8AA75;
+  border-bottom: 2px solid var(--laranja);
 }
 
 .opiniao-item .texto-container .citacao-nome {
   margin-top: 5px;
   font-style: italic;
-  color: #D8AA75;
+  color: var(--laranja);
 }
 
 .opiniao-item .texto-container .citacao-nome::before {
@@ -195,7 +196,7 @@ body {
   display: inline-block;
   font-weight: bold;
   font-size: 2rem;
-  color: #D8AA75;
+  color: var(--laranja);
   padding: 5px 41px;
   border: 5px solid;
   border-radius: 2px;
@@ -203,7 +204,7 @@ body {
 
 /* FAQ Section*/
 .faq-section {
-  background: #E8E0DC;
+  background: var(--cinza-2);
 }
 
 /* Contato Section*/
@@ -243,18 +244,18 @@ body {
   display: inline-block;
   width: 11px;
   height: 11px;
-  background: #D8AA75;
+  background: var(--laranja);
   margin-right: 10px;
 }
 
 .contato-section .lista-dados-contatos a:hover {
-  color: #D8AA75;
+  color: var(--laranja);
 }
 
 /* Footer */
 .footer {
   padding: 28px 20px 40px 20px;
-  background: #F0E5CF;
+  background: var(--areia);
   text-align: center;
 }
 

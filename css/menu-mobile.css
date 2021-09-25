@@ -4,7 +4,7 @@
     display: block;
     width: 36px;
     height: 36px;
-    color: #816B5F;
+    color: var(--marrom);
     border-top: 4px solid;
     cursor: pointer;
     transform: translateY(5px);
@@ -48,7 +48,7 @@
     right: 0;
     top: 68px;
     width: 170px;
-    background: #F0E5CF;
+    background: var(--areia);
     box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1),
               0 5px 5px 0px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -73,7 +73,7 @@
   }
 
   .menu-mobile>li {
-    border-top: 1px solid #816B5F;
+    border-top: 1px solid var(--marrom);
     margin-left: 10px;
     margin-right: 10px;
   }

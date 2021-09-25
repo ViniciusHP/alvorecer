@@ -2,9 +2,9 @@
   position: absolute;
   font-weight: bold;
   max-width: 300px;
-  color: #F0E5CF;
+  color: var(--areia);
   background: rgba(129, 107, 95, 0.9);
   padding: 10px 15px;
   border-radius: 5px;
-  border: 3px solid #D8AA75;
+  border: 3px solid var(--laranja);
 }

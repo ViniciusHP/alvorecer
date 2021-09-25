@@ -14,7 +14,7 @@
   position: absolute;
   top: 2.3125rem;
   left: 5px;
-  color: #D8AA75;
+  color: var(--laranja);
   transition: .3s all ease-in-out;
 }
 
@@ -22,11 +22,11 @@
 .form-group input[type="password"] {
   margin-top: 2rem;
   border: none;
-  border-bottom: 2px solid #816B5F;
+  border-bottom: 2px solid var(--marrom);
   background: transparent;
   font-size: 1.8rem;
   padding: 5px;
-  color: #816B5F;
+  color: var(--marrom);
 }
 
 .form-group{
@@ -35,7 +35,7 @@
 
 .form-group input[type="text"]:focus,
 .form-group input[type="password"]:focus {
-  border-color: #D8AA75;
+  border-color: var(--laranja);
 }
 
 .form-group input[type="text"]:focus ~ label,
@@ -53,8 +53,8 @@
 
 .submit-btn-container input[type="submit"]{
   font-size: 1.5rem;
-  color: #F0E5CF;
-  background: #D8AA75;
+  color: var(--areia);
+  background: var(--laranja);
   border: none;
   border-radius: 5px;
   padding: 5px 20px;
