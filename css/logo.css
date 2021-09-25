@@ -11,25 +11,25 @@
 }
 
 .logo-svg .contorno{
-  stroke: #816B5F;
+  stroke: var(--marrom);
   stroke-width: 2;
   stroke-miterlimit: 22.9256;
   transition: all .5s ease-in-out;
 }
 
 .logo-svg .preenchimento {
-  fill: #816B5F;
+  fill: var(--marrom);
   fill-rule: nonzero;
   transition: all .5s ease-in-out;
 }
 
 .logo-svg:hover #texto ,
 .logo-svg:hover #sol {
-  fill: #D8AA75;
+  fill: var(--laranja);
 }
 
 .logo-svg:hover #sol {
-  stroke: #D8AA75;
+  stroke: var(--laranja);
 }
 
 @media (max-width: 327px){
