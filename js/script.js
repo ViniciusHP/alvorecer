@@ -60,7 +60,7 @@ const mes = dataHoje.getMonth() + 1;
 const isDezembro = mes === 12;
 
 function carregaEstiloCssNeve() {
-  const href = '../css/neve.css';
+  const href = './css/neve.css';
   const elementoLink = document.createElement('link');
   elementoLink.setAttribute('rel', 'stylesheet');
   elementoLink.setAttribute('type', 'text/css');
